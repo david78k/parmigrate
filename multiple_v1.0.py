@@ -19,7 +19,6 @@ vwnd = 1
 alpha = 0.75
 threshold = 8
 sampletime = 10
-maxbandwidth = 120 # MB
 
 src_prefix = "gra"
 dest_prefix = "grb"
@@ -266,7 +265,7 @@ def suspend(vminfo):
 def resume(vminfo):
 	pm = vminfo.pm
 	vm = vminfo.vm
-	#maxbandwidth = 120 # MB
+	maxbandwidth = 120 # MB
 	cmd = "ssh " + pm + " virsh migrate-setspeed " + vm + " " + str(maxbandwidth)
 	#susq.remove(vminfo)
 	#mq.append(vminfo)
@@ -433,10 +432,10 @@ def main(argv):
 	outputfile = ''
 
 	filename = os.path.basename(__file__)
-	usage = filename + ' -s <schedule> -v <vm window> -g <number of gridftp parallel connections> -b <max bandwidth>' 
+	usage = filename + ' -s <schedule> -v <vm window> -g <number of gridftp parallel connections>' 
 
 	try:
-		opts, args = getopt.getopt(argv,"hs:v:d:g:b:",["sched=","vwnd=","delay=","gridftp="])
+		opts, args = getopt.getopt(argv,"hs:v:d:g:",["sched=","vwnd=","delay=","gridftp="])
 	except getopt.GetoptError:
 		print usage
 		sys.exit(2)
@@ -453,8 +452,6 @@ def main(argv):
 			is_gridftp = True
 		elif opt in ("-d", "--delay"):
 			delay = arg
-		elif opt in ("-b", "--bandwidth"):
-			maxbandwidth = arg
 	print 'scheduling is', sched
 	print 'vm window is', vwnd
 
