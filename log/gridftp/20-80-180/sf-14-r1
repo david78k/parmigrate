@@ -1,0 +1,492 @@
+Log of time -p /nfs/vmanage/controller/multiple.py -s sf -v 1 -g 14 
+Fri Mar 29 09:12:11 2013
+
+scheduling is sf
+vm window is 1
+('1', 1, 'gra1', 'gra1-1', 548864)
+('2', 1, 'gra1', 'gra1-2', 548864)
+('3', 2, 'gra2', 'gra2-1', 548864)
+('4', 2, 'gra2', 'gra2-2', 548864)
+('5', 2, 'gra2', 'gra2-4', 548864)
+('6', 2, 'gra2', 'gra2-3', 548864)
+('7', 3, 'gra3', 'gra3-8', 548864)
+('8', 3, 'gra3', 'gra3-7', 548864)
+('9', 3, 'gra3', 'gra3-3', 548864)
+('10', 3, 'gra3', 'gra3-6', 548864)
+('11', 3, 'gra3', 'gra3-1', 548864)
+('12', 3, 'gra3', 'gra3-4', 548864)
+('13', 3, 'gra3', 'gra3-2', 548864)
+('14', 3, 'gra3', 'gra3-5', 548864)
+('15', 1, 'gra1', 'gra1-3', 1073152)
+('16', 2, 'gra2', 'gra2-6', 1073152)
+('17', 2, 'gra2', 'gra2-5', 1073152)
+('18', 4, 'gra4', 'gra4-2', 1073152)
+('19', 4, 'gra4', 'gra4-3', 1073152)
+('20', 4, 'gra4', 'gra4-4', 1073152)
+('21', 4, 'gra4', 'gra4-1', 1073152)
+('22', 5, 'gra5', 'gra5-2', 1073152)
+('23', 5, 'gra5', 'gra5-1', 1097728)
+('24', 6, 'gra6', 'gra6-1', 1097728)
+('25', 1, 'gra1', 'gra1-4', 2138112)
+('26', 5, 'gra5', 'gra5-3', 2185216)
+('27', 7, 'gra7', 'gra7-1', 2185216)
+('28', 7, 'gra7', 'gra7-2', 2185216)
+('29', 6, 'gra6', 'gra6-2', 3201024)
+('30', 8, 'gra8', 'gra8-1', 4370432)
+ssh gra1 "virsh migrate --live gra1-1 qemu+ssh://grb1/system"
+ssh gra1 "mkdir -p /root/vmstate; ssh grb1 mkdir -p /root/vmstate"
+1 has started.
+list=[ 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 ] susq=[ ]
+waiting ...
+ssh gra1 "rm -rf /root/vmstate/gra1-1.vstat; ssh grb1 rm -rf /root/vmstate/gra1-1.vstat"
+saving gra1-1 to /root/vmstate/gra1-1.vstat ... 
+ssh gra1 virsh save gra1-1 /root/vmstate/gra1-1.vstat
+transferring /root/vmstate/gra1-1.vstat to grb1 ... 
+ssh gra1 globus-url-copy -p 14 /root/vmstate/gra1-1.vstat sshftp://grb1//root/vmstate/gra1-1.vstat
+restoring /root/vmstate/gra1-1.vstat from grb1... 
+ssh gra1 ssh grb1 virsh restore /root/vmstate/gra1-1.vstat
+gridftp 23.2409169674 9.74076199532 7.30919885635 6.19095611572
+finish 24.558049202 35.5512821674
+released.
+ssh gra1 "virsh migrate --live gra1-2 qemu+ssh://grb1/system"
+ 2 has started.
+list=[ 3 4 5 6 7ssh gra1 "mkdir -p /root/vmstate; ssh grb1 mkdir -p /root/vmstate"
+ 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 2 ] susq=[ ]
+waiting ...
+ssh gra1 "rm -rf /root/vmstate/gra1-2.vstat; ssh grb1 rm -rf /root/vmstate/gra1-2.vstat"
+saving gra1-2 to /root/vmstate/gra1-2.vstat ... 
+ssh gra1 virsh save gra1-2 /root/vmstate/gra1-2.vstat
+transferring /root/vmstate/gra1-2.vstat to grb1 ... 
+ssh gra1 globus-url-copy -p 14 /root/vmstate/gra1-2.vstat sshftp://grb1//root/vmstate/gra1-2.vstat
+restoring /root/vmstate/gra1-2.vstat from grb1... 
+ssh gra1 ssh grb1 virsh restore /root/vmstate/gra1-2.vstat
+gridftp 14.8930456638 4.6417798996 6.23699092865 4.01427483559
+finish 16.2536771297 51.8055121899
+released.
+ssh gra2 "virsh migrate --live gra2-1 qemu+ssh://grb2/system"
+ 3 has started.
+list=[ 4ssh gra2 "mkdir -p /root/vmstate; ssh grb2 mkdir -p /root/vmstate"
+ 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 ] susq=[ ]
+waiting ...
+ssh gra2 "rm -rf /root/vmstate/gra2-1.vstat; ssh grb2 rm -rf /root/vmstate/gra2-1.vstat"
+saving gra2-1 to /root/vmstate/gra2-1.vstat ... 
+ssh gra2 virsh save gra2-1 /root/vmstate/gra2-1.vstat
+transferring /root/vmstate/gra2-1.vstat to grb2 ... 
+ssh gra2 globus-url-copy -p 14 /root/vmstate/gra2-1.vstat sshftp://grb2//root/vmstate/gra2-1.vstat
+restoring /root/vmstate/gra2-1.vstat from grb2... 
+ssh gra2 ssh grb2 virsh restore /root/vmstate/gra2-1.vstat
+gridftp 53.0063700676 29.5337760448 10.0592970848 13.4132969379
+finish 56.1458318233 107.951905966
+released.
+ssh gra2 "virsh migrate --live gra2-2 qemu+ssh://grb2/system"
+ssh gra2 "mkdir -p /root/vmstate; ssh grb2 mkdir -p /root/vmstate"
+4 has started.
+list=[ 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 ] susq=[ ]
+waiting ...
+ssh gra2 "rm -rf /root/vmstate/gra2-2.vstat; ssh grb2 rm -rf /root/vmstate/gra2-2.vstat"
+saving gra2-2 to /root/vmstate/gra2-2.vstat ... 
+ssh gra2 virsh save gra2-2 /root/vmstate/gra2-2.vstat
+transferring /root/vmstate/gra2-2.vstat to grb2 ... 
+ssh gra2 globus-url-copy -p 14 /root/vmstate/gra2-2.vstat sshftp://grb2//root/vmstate/gra2-2.vstat
+restoring /root/vmstate/gra2-2.vstat from grb2... 
+ssh gra2 ssh grb2 virsh restore /root/vmstate/gra2-2.vstat
+gridftp 42.6825351715 16.0368618965 18.4489221573 8.19675111771
+finish 47.9991428852 155.951575041
+released.
+ssh gra2 "virsh migrate --live gra2-4 qemu+ssh://grb2/system"
+ 5 has started.
+list=[ 6 7 8 9ssh gra2 "mkdir -p /root/vmstate; ssh grb2 mkdir -p /root/vmstate"
+ 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 ] susq=[ ]
+waiting ...
+ssh gra2 "rm -rf /root/vmstate/gra2-4.vstat; ssh grb2 rm -rf /root/vmstate/gra2-4.vstat"
+saving gra2-4 to /root/vmstate/gra2-4.vstat ... 
+ssh gra2 virsh save gra2-4 /root/vmstate/gra2-4.vstat
+transferring /root/vmstate/gra2-4.vstat to grb2 ... 
+ssh gra2 globus-url-copy -p 14 /root/vmstate/gra2-4.vstat sshftp://grb2//root/vmstate/gra2-4.vstat
+restoring /root/vmstate/gra2-4.vstat from grb2... 
+ssh gra2 ssh grb2 virsh restore /root/vmstate/gra2-4.vstat
+gridftp 23.9565088749 7.39402794838 6.70703101158 9.85544991493
+finish 27.1911780834 183.143298149
+released.
+ssh gra2 "virsh migrate --live gra2-3 qemu+ssh://grb2/system"
+ssh gra2 "mkdir -p /root/vmstate; ssh grb2 mkdir -p /root/vmstate"
+6 has started.
+list=[ 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 6 ] susq=[ ]
+waiting ...
+ssh gra2 "rm -rf /root/vmstate/gra2-3.vstat; ssh grb2 rm -rf /root/vmstate/gra2-3.vstat"
+saving gra2-3 to /root/vmstate/gra2-3.vstat ... 
+ssh gra2 virsh save gra2-3 /root/vmstate/gra2-3.vstat
+transferring /root/vmstate/gra2-3.vstat to grb2 ... 
+ssh gra2 globus-url-copy -p 14 /root/vmstate/gra2-3.vstat sshftp://grb2//root/vmstate/gra2-3.vstat
+restoring /root/vmstate/gra2-3.vstat from grb2... 
+ssh gra2 ssh grb2 virsh restore /root/vmstate/gra2-3.vstat
+gridftp 25.8927128315 3.92599201202 6.39008688927 15.5766339302
+finish 27.7206008434 210.864413023
+released.
+ssh gra3 "virsh migrate --live gra3-8 qemu+ssh://grb3/system"
+ 7 has started.
+list=[ 8 9 ssh gra3 "mkdir -p /root/vmstate; ssh grb3 mkdir -p /root/vmstate"
+10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 7 ] susq=[ ]
+waiting ...
+ssh gra3 "rm -rf /root/vmstate/gra3-8.vstat; ssh grb3 rm -rf /root/vmstate/gra3-8.vstat"
+saving gra3-8 to /root/vmstate/gra3-8.vstat ... 
+ssh gra3 virsh save gra3-8 /root/vmstate/gra3-8.vstat
+transferring /root/vmstate/gra3-8.vstat to grb3 ... 
+ssh gra3 globus-url-copy -p 14 /root/vmstate/gra3-8.vstat sshftp://grb3//root/vmstate/gra3-8.vstat
+restoring /root/vmstate/gra3-8.vstat from grb3... 
+ssh gra3 ssh grb3 virsh restore /root/vmstate/gra3-8.vstat
+gridftp 28.0278198719 6.00848603249 11.7232949734 10.296038866
+finish 31.1727979183 242.037760019
+released.
+ssh gra3 "virsh migrate --live gra3-7 qemu+ssh://grb3/system"
+ssh gra3 "mkdir -p /root/vmstate; ssh grb3 mkdir -p /root/vmstate"
+8 has started.
+list=[ 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 ] susq=[ ]
+waiting ...
+ssh gra3 "rm -rf /root/vmstate/gra3-7.vstat; ssh grb3 rm -rf /root/vmstate/gra3-7.vstat"
+saving gra3-7 to /root/vmstate/gra3-7.vstat ... 
+ssh gra3 virsh save gra3-7 /root/vmstate/gra3-7.vstat
+transferring /root/vmstate/gra3-7.vstat to grb3 ... 
+ssh gra3 globus-url-copy -p 14 /root/vmstate/gra3-7.vstat sshftp://grb3//root/vmstate/gra3-7.vstat
+restoring /root/vmstate/gra3-7.vstat from grb3... 
+ssh gra3 ssh grb3 virsh restore /root/vmstate/gra3-7.vstat
+gridftp 36.5609900951 4.4772298336 17.504912138 14.5788481236
+finish 39.526047945 281.564311028
+released.
+ssh gra3 "virsh migrate --live gra3-3 qemu+ssh://grb3/system"
+ 9 has started.
+list=[ 10 11 12 13 14 15 16ssh gra3 "mkdir -p /root/vmstate; ssh grb3 mkdir -p /root/vmstate"
+ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 ] susq=[ ]
+waiting ...
+ssh gra3 "rm -rf /root/vmstate/gra3-3.vstat; ssh grb3 rm -rf /root/vmstate/gra3-3.vstat"
+saving gra3-3 to /root/vmstate/gra3-3.vstat ... 
+ssh gra3 virsh save gra3-3 /root/vmstate/gra3-3.vstat
+transferring /root/vmstate/gra3-3.vstat to grb3 ... 
+ssh gra3 globus-url-copy -p 14 /root/vmstate/gra3-3.vstat sshftp://grb3//root/vmstate/gra3-3.vstat
+restoring /root/vmstate/gra3-3.vstat from grb3... 
+ssh gra3 ssh grb3 virsh restore /root/vmstate/gra3-3.vstat
+gridftp 26.2273933887 5.75555610657 12.9194180965 7.55241918564
+finish 32.872977972 314.437849045
+released.
+ssh gra3 "virsh migrate --live gra3-6 qemu+ssh://grb3/system"
+ 10 has started.
+list=[ 11 ssh gra3 "mkdir -p /root/vmstate; ssh grb3 mkdir -p /root/vmstate"
+12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 10 ] susq=[ ]
+waiting ...
+ssh gra3 "rm -rf /root/vmstate/gra3-6.vstat; ssh grb3 rm -rf /root/vmstate/gra3-6.vstat"
+saving gra3-6 to /root/vmstate/gra3-6.vstat ... 
+ssh gra3 virsh save gra3-6 /root/vmstate/gra3-6.vstat
+transferring /root/vmstate/gra3-6.vstat to grb3 ... 
+ssh gra3 globus-url-copy -p 14 /root/vmstate/gra3-6.vstat sshftp://grb3//root/vmstate/gra3-6.vstat
+restoring /root/vmstate/gra3-6.vstat from grb3... 
+ssh gra3 ssh grb3 virsh restore /root/vmstate/gra3-6.vstat
+gridftp 36.0951981544 5.16648101807 14.7523930073 16.1763241291
+finish 37.4092810154 351.847690105
+released.
+ssh gra3 "virsh migrate --live gra3-1 qemu+ssh://grb3/system"
+ 11 has started.
+list=[ 12 13 14 15 16 ssh gra3 "mkdir -p /root/vmstate; ssh grb3 mkdir -p /root/vmstate"
+17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 11 ] susq=[ ]
+waiting ...
+ssh gra3 "rm -rf /root/vmstate/gra3-1.vstat; ssh grb3 rm -rf /root/vmstate/gra3-1.vstat"
+saving gra3-1 to /root/vmstate/gra3-1.vstat ... 
+ssh gra3 virsh save gra3-1 /root/vmstate/gra3-1.vstat
+transferring /root/vmstate/gra3-1.vstat to grb3 ... 
+ssh gra3 globus-url-copy -p 14 /root/vmstate/gra3-1.vstat sshftp://grb3//root/vmstate/gra3-1.vstat
+restoring /root/vmstate/gra3-1.vstat from grb3... 
+ssh gra3 ssh grb3 virsh restore /root/vmstate/gra3-1.vstat
+gridftp 32.0871117115 3.93386292458 10.3224380016 17.8308107853
+finish 35.17552495 387.023766041
+released.
+ssh gra3 "virsh migrate --live gra3-4 qemu+ssh://grb3/system"
+ssh gra3 "mkdir -p /root/vmstate; ssh grb3 mkdir -p /root/vmstate"
+12 has started.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 ] susq=[ ]
+waiting ...
+ssh gra3 "rm -rf /root/vmstate/gra3-4.vstat; ssh grb3 rm -rf /root/vmstate/gra3-4.vstat"
+saving gra3-4 to /root/vmstate/gra3-4.vstat ... 
+ssh gra3 virsh save gra3-4 /root/vmstate/gra3-4.vstat
+transferring /root/vmstate/gra3-4.vstat to grb3 ... 
+ssh gra3 globus-url-copy -p 14 /root/vmstate/gra3-4.vstat sshftp://grb3//root/vmstate/gra3-4.vstat
+restoring /root/vmstate/gra3-4.vstat from grb3... 
+ssh gra3 ssh grb3 virsh restore /root/vmstate/gra3-4.vstat
+gridftp 48.1714711189 4.02974104881 20.9822430611 23.159487009
+finish 51.408495903 438.432775974
+released.
+ssh gra3 "virsh migrate --live gra3-2 qemu+ssh://grb3/system"
+ 13 has started.
+list=[ 14 15 16 17ssh gra3 "mkdir -p /root/vmstate; ssh grb3 mkdir -p /root/vmstate"
+ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 13 ] susq=[ ]
+waiting ...
+ssh gra3 "rm -rf /root/vmstate/gra3-2.vstat; ssh grb3 rm -rf /root/vmstate/gra3-2.vstat"
+saving gra3-2 to /root/vmstate/gra3-2.vstat ... 
+ssh gra3 virsh save gra3-2 /root/vmstate/gra3-2.vstat
+transferring /root/vmstate/gra3-2.vstat to grb3 ... 
+ssh gra3 globus-url-copy -p 14 /root/vmstate/gra3-2.vstat sshftp://grb3//root/vmstate/gra3-2.vstat
+restoring /root/vmstate/gra3-2.vstat from grb3... 
+ssh gra3 ssh grb3 virsh restore /root/vmstate/gra3-2.vstat
+gridftp 36.024869442 5.47798514366 11.6438741684 18.9030101299
+finish 41.5927629471 480.026087046
+released.
+ssh gra3 "virsh migrate --live gra3-5 qemu+ssh://grb3/system"
+ 14 has started.
+list=[ 15 16 17 18 19 20 ssh gra3 "mkdir -p /root/vmstate; ssh grb3 mkdir -p /root/vmstate"
+21 22 23 24 25 26 27 28 29 30 ] mq=[ 14 ] susq=[ ]
+waiting ...
+ssh gra3 "rm -rf /root/vmstate/gra3-5.vstat; ssh grb3 rm -rf /root/vmstate/gra3-5.vstat"
+saving gra3-5 to /root/vmstate/gra3-5.vstat ... 
+ssh gra3 virsh save gra3-5 /root/vmstate/gra3-5.vstat
+transferring /root/vmstate/gra3-5.vstat to grb3 ... 
+ssh gra3 globus-url-copy -p 14 /root/vmstate/gra3-5.vstat sshftp://grb3//root/vmstate/gra3-5.vstat
+restoring /root/vmstate/gra3-5.vstat from grb3... 
+ssh gra3 ssh grb3 virsh restore /root/vmstate/gra3-5.vstat
+gridftp 45.5224928856 7.43098282814 21.5538749695 16.537635088
+finish 47.9422411919 527.969168186
+released.
+15 has started.
+list=[ 16 ssh gra1 "virsh migrate --live gra1-3 qemu+ssh://grb1/system"
+17 18 19 20 21 22 23 ssh gra1 "mkdir -p /root/vmstate; ssh grb1 mkdir -p /root/vmstate"
+24 25 26 27 28 29 30 ] mq=[ 15 ] susq=[ ]
+waiting ...
+ssh gra1 "rm -rf /root/vmstate/gra1-3.vstat; ssh grb1 rm -rf /root/vmstate/gra1-3.vstat"
+saving gra1-3 to /root/vmstate/gra1-3.vstat ... 
+ssh gra1 virsh save gra1-3 /root/vmstate/gra1-3.vstat
+transferring /root/vmstate/gra1-3.vstat to grb1 ... 
+ssh gra1 globus-url-copy -p 14 /root/vmstate/gra1-3.vstat sshftp://grb1//root/vmstate/gra1-3.vstat
+restoring /root/vmstate/gra1-3.vstat from grb1... 
+ssh gra1 ssh grb1 virsh restore /root/vmstate/gra1-3.vstat
+gridftp 53.6503520012 10.3640210629 16.0130209923 27.2733099461
+finish 56.8572361469 584.826980114
+released.
+ssh gra2 "virsh migrate --live gra2-6 qemu+ssh://grb2/system"
+ 16 has started.
+list=[ 17 ssh gra2 "mkdir -p /root/vmstate; ssh grb2 mkdir -p /root/vmstate"
+18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 16 ] susq=[ ]
+waiting ...
+ssh gra2 "rm -rf /root/vmstate/gra2-6.vstat; ssh grb2 rm -rf /root/vmstate/gra2-6.vstat"
+saving gra2-6 to /root/vmstate/gra2-6.vstat ... 
+ssh gra2 virsh save gra2-6 /root/vmstate/gra2-6.vstat
+transferring /root/vmstate/gra2-6.vstat to grb2 ... 
+ssh gra2 globus-url-copy -p 14 /root/vmstate/gra2-6.vstat sshftp://grb2//root/vmstate/gra2-6.vstat
+restoring /root/vmstate/gra2-6.vstat from grb2... 
+ssh gra2 ssh grb2 virsh restore /root/vmstate/gra2-6.vstat
+gridftp 74.6811740398 17.3524520397 24.3307449818 32.9979770184
+finish 80.9257450104 665.753292084
+released.
+ssh gra2 "virsh migrate --live gra2-5 qemu+ssh://grb2/system"
+ssh gra2 "mkdir -p /root/vmstate; ssh grb2 mkdir -p /root/vmstate"
+17 has started.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 17 ] susq=[ ]
+waiting ...
+ssh gra2 "rm -rf /root/vmstate/gra2-5.vstat; ssh grb2 rm -rf /root/vmstate/gra2-5.vstat"
+saving gra2-5 to /root/vmstate/gra2-5.vstat ... 
+ssh gra2 virsh save gra2-5 /root/vmstate/gra2-5.vstat
+transferring /root/vmstate/gra2-5.vstat to grb2 ... 
+ssh gra2 globus-url-copy -p 14 /root/vmstate/gra2-5.vstat sshftp://grb2//root/vmstate/gra2-5.vstat
+restoring /root/vmstate/gra2-5.vstat from grb2... 
+ssh gra2 ssh grb2 virsh restore /root/vmstate/gra2-5.vstat
+gridftp 114.701079845 11.0278959274 60.058259964 43.614923954
+finish 117.884966135 783.638770103
+released.
+ssh gra4 "virsh migrate --live gra4-2 qemu+ssh://grb4/system"
+ssh gra4 "mkdir -p /root/vmstate; ssh grb4 mkdir -p /root/vmstate"
+18 has started.
+list=[ 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 18 ] susq=[ ]
+waiting ...
+ssh gra4 "rm -rf /root/vmstate/gra4-2.vstat; ssh grb4 rm -rf /root/vmstate/gra4-2.vstat"
+saving gra4-2 to /root/vmstate/gra4-2.vstat ... 
+ssh gra4 virsh save gra4-2 /root/vmstate/gra4-2.vstat
+transferring /root/vmstate/gra4-2.vstat to grb4 ... 
+ssh gra4 globus-url-copy -p 14 /root/vmstate/gra4-2.vstat sshftp://grb4//root/vmstate/gra4-2.vstat
+restoring /root/vmstate/gra4-2.vstat from grb4... 
+ssh gra4 ssh grb4 virsh restore /root/vmstate/gra4-2.vstat
+gridftp 49.2363638878 10.5093090534 13.0635459423 25.6635088921
+finish 50.5979089737 834.237190962
+released.
+ssh gra4 "virsh migrate --live gra4-3 qemu+ssh://grb4/system"
+ 19 has started.
+list=[ ssh gra4 "mkdir -p /root/vmstate; ssh grb4 mkdir -p /root/vmstate"
+20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 19 ] susq=[ ]
+waiting ...
+ssh gra4 "rm -rf /root/vmstate/gra4-3.vstat; ssh grb4 rm -rf /root/vmstate/gra4-3.vstat"
+saving gra4-3 to /root/vmstate/gra4-3.vstat ... 
+ssh gra4 virsh save gra4-3 /root/vmstate/gra4-3.vstat
+transferring /root/vmstate/gra4-3.vstat to grb4 ... 
+ssh gra4 globus-url-copy -p 14 /root/vmstate/gra4-3.vstat sshftp://grb4//root/vmstate/gra4-3.vstat
+restoring /root/vmstate/gra4-3.vstat from grb4... 
+ssh gra4 ssh grb4 virsh restore /root/vmstate/gra4-3.vstat
+gridftp 63.5515117645 10.1460459232 23.9102020264 29.4952638149
+finish 68.8060228825 903.043776035
+released.
+ssh gra4 "virsh migrate --live gra4-4 qemu+ssh://grb4/system"
+ 20 has started.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 20 ] susq=[ ]
+ssh gra4 "mkdir -p /root/vmstate; ssh grb4 mkdir -p /root/vmstate"
+waiting ...
+ssh gra4 "rm -rf /root/vmstate/gra4-4.vstat; ssh grb4 rm -rf /root/vmstate/gra4-4.vstat"
+saving gra4-4 to /root/vmstate/gra4-4.vstat ... 
+ssh gra4 virsh save gra4-4 /root/vmstate/gra4-4.vstat
+transferring /root/vmstate/gra4-4.vstat to grb4 ... 
+ssh gra4 globus-url-copy -p 14 /root/vmstate/gra4-4.vstat sshftp://grb4//root/vmstate/gra4-4.vstat
+restoring /root/vmstate/gra4-4.vstat from grb4... 
+ssh gra4 ssh grb4 virsh restore /root/vmstate/gra4-4.vstat
+gridftp 70.4767830372 11.1381349564 23.6843528748 35.6542952061
+finish 72.780684948 975.825101137
+released.
+ssh gra4 "virsh migrate --live gra4-1 qemu+ssh://grb4/system"
+ssh gra4 "mkdir -p /root/vmstate; ssh grb4 mkdir -p /root/vmstate"
+21 has started.
+list=[ 22 23 24 25 26 27 28 29 30 ] mq=[ 21 ] susq=[ ]
+waiting ...
+ssh gra4 "rm -rf /root/vmstate/gra4-1.vstat; ssh grb4 rm -rf /root/vmstate/gra4-1.vstat"
+saving gra4-1 to /root/vmstate/gra4-1.vstat ... 
+ssh gra4 virsh save gra4-1 /root/vmstate/gra4-1.vstat
+transferring /root/vmstate/gra4-1.vstat to grb4 ... 
+ssh gra4 globus-url-copy -p 14 /root/vmstate/gra4-1.vstat sshftp://grb4//root/vmstate/gra4-1.vstat
+restoring /root/vmstate/gra4-1.vstat from grb4... 
+ssh gra4 ssh grb4 virsh restore /root/vmstate/gra4-1.vstat
+gridftp 91.096670866 11.1914069653 36.4200899601 43.4851739407
+finish 94.5577018261 1070.38333797
+released.
+ssh gra5 "virsh migrate --live gra5-2 qemu+ssh://grb5/system"
+ssh gra5 "mkdir -p /root/vmstate; ssh grb5 mkdir -p /root/vmstate"
+22 has started.
+list=[ 23 24 25 26 27 28 29 30 ] mq=[ 22 ] susq=[ ]
+waiting ...
+ssh gra5 "rm -rf /root/vmstate/gra5-2.vstat; ssh grb5 rm -rf /root/vmstate/gra5-2.vstat"
+saving gra5-2 to /root/vmstate/gra5-2.vstat ... 
+ssh gra5 virsh save gra5-2 /root/vmstate/gra5-2.vstat
+transferring /root/vmstate/gra5-2.vstat to grb5 ... 
+ssh gra5 globus-url-copy -p 14 /root/vmstate/gra5-2.vstat sshftp://grb5//root/vmstate/gra5-2.vstat
+restoring /root/vmstate/gra5-2.vstat from grb5... 
+ssh gra5 ssh grb5 virsh restore /root/vmstate/gra5-2.vstat
+gridftp 35.7670471668 10.5437481403 12.1284790039 13.0948200226
+finish 37.2368431091 1107.62069011
+released.
+23 has started.ssh gra5 "virsh migrate --live gra5-1 qemu+ssh://grb5/system"
+
+list=[ 24 25 26 27 28 29 30ssh gra5 "mkdir -p /root/vmstate; ssh grb5 mkdir -p /root/vmstate"
+ ] mq=[ 23 ] susq=[ ]
+waiting ...
+ssh gra5 "rm -rf /root/vmstate/gra5-1.vstat; ssh grb5 rm -rf /root/vmstate/gra5-1.vstat"
+saving gra5-1 to /root/vmstate/gra5-1.vstat ... 
+ssh gra5 virsh save gra5-1 /root/vmstate/gra5-1.vstat
+transferring /root/vmstate/gra5-1.vstat to grb5 ... 
+ssh gra5 globus-url-copy -p 14 /root/vmstate/gra5-1.vstat sshftp://grb5//root/vmstate/gra5-1.vstat
+restoring /root/vmstate/gra5-1.vstat from grb5... 
+ssh gra5 ssh grb5 virsh restore /root/vmstate/gra5-1.vstat
+gridftp 49.8225970268 10.811177969 14.2383649349 24.7730541229
+finish 55.4321718216 1163.053406
+released.
+ssh gra6 "virsh migrate --live gra6-1 qemu+ssh://grb6/system"
+ssh gra6 "mkdir -p /root/vmstate; ssh grb6 mkdir -p /root/vmstate"
+24 has started.
+list=[ 25 26 27 28 29 30 ] mq=[ 24 ] susq=[ ]
+waiting ...
+ssh gra6 "rm -rf /root/vmstate/gra6-1.vstat; ssh grb6 rm -rf /root/vmstate/gra6-1.vstat"
+saving gra6-1 to /root/vmstate/gra6-1.vstat ... 
+ssh gra6 virsh save gra6-1 /root/vmstate/gra6-1.vstat
+transferring /root/vmstate/gra6-1.vstat to grb6 ... 
+ssh gra6 globus-url-copy -p 14 /root/vmstate/gra6-1.vstat sshftp://grb6//root/vmstate/gra6-1.vstat
+restoring /root/vmstate/gra6-1.vstat from grb6... 
+ssh gra6 ssh grb6 virsh restore /root/vmstate/gra6-1.vstat
+gridftp 56.8703942299 11.7424340248 25.3160631657 19.8118970394
+finish 63.558660984 1226.61259007
+released.
+ssh gra1 "virsh migrate --live gra1-4 qemu+ssh://grb1/system"
+ 25 has started.
+list=[ 26 27ssh gra1 "mkdir -p /root/vmstate; ssh grb1 mkdir -p /root/vmstate"
+ 28 29 30 ] mq=[ 25 ] susq=[ ]
+waiting ...
+ssh gra1 "rm -rf /root/vmstate/gra1-4.vstat; ssh grb1 rm -rf /root/vmstate/gra1-4.vstat"
+saving gra1-4 to /root/vmstate/gra1-4.vstat ... 
+ssh gra1 virsh save gra1-4 /root/vmstate/gra1-4.vstat
+transferring /root/vmstate/gra1-4.vstat to grb1 ... 
+ssh gra1 globus-url-copy -p 14 /root/vmstate/gra1-4.vstat sshftp://grb1//root/vmstate/gra1-4.vstat
+restoring /root/vmstate/gra1-4.vstat from grb1... 
+ssh gra1 ssh grb1 virsh restore /root/vmstate/gra1-4.vstat
+gridftp 162.330272913 38.3649349213 60.4030749798 63.5622630119
+finish 163.824496984 1390.43764806
+released.
+ssh gra5 "virsh migrate --live gra5-3 qemu+ssh://grb5/system"
+ssh gra5 "mkdir -p /root/vmstate; ssh grb5 mkdir -p /root/vmstate"
+26 has started.
+list=[ 27 28 29 30 ] mq=[ 26 ] susq=[ ]
+waiting ...
+ssh gra5 "rm -rf /root/vmstate/gra5-3.vstat; ssh grb5 rm -rf /root/vmstate/gra5-3.vstat"
+saving gra5-3 to /root/vmstate/gra5-3.vstat ... 
+ssh gra5 virsh save gra5-3 /root/vmstate/gra5-3.vstat
+transferring /root/vmstate/gra5-3.vstat to grb5 ... 
+ssh gra5 globus-url-copy -p 14 /root/vmstate/gra5-3.vstat sshftp://grb5//root/vmstate/gra5-3.vstat
+restoring /root/vmstate/gra5-3.vstat from grb5... 
+ssh gra5 ssh grb5 virsh restore /root/vmstate/gra5-3.vstat
+gridftp 151.712327957 35.7557690144 49.9299991131 66.0265598297
+finish 153.257073879 1543.69522405
+released.
+ssh gra7 "virsh migrate --live gra7-1 qemu+ssh://grb7/system"
+ 27 has started.
+list=[ 28 29 30 ] mq=[ 27 ] susq=[ssh gra7 "mkdir -p /root/vmstate; ssh grb7 mkdir -p /root/vmstate"
+ ]
+waiting ...
+ssh gra7 "rm -rf /root/vmstate/gra7-1.vstat; ssh grb7 rm -rf /root/vmstate/gra7-1.vstat"
+saving gra7-1 to /root/vmstate/gra7-1.vstat ... 
+ssh gra7 virsh save gra7-1 /root/vmstate/gra7-1.vstat
+transferring /root/vmstate/gra7-1.vstat to grb7 ... 
+ssh gra7 globus-url-copy -p 14 /root/vmstate/gra7-1.vstat sshftp://grb7//root/vmstate/gra7-1.vstat
+restoring /root/vmstate/gra7-1.vstat from grb7... 
+ssh gra7 ssh grb7 virsh restore /root/vmstate/gra7-1.vstat
+gridftp 151.401757956 65.5140299797 48.5881950855 37.2995328903
+finish 153.185549974 1696.88135815
+released.
+ssh gra7 "virsh migrate --live gra7-2 qemu+ssh://grb7/system"
+ 28 has started.
+list=[ 29 30 ] mq=[ 28 ] susq=[ ]
+ssh gra7 "mkdir -p /root/vmstate; ssh grb7 mkdir -p /root/vmstate"
+waiting ...
+ssh gra7 "rm -rf /root/vmstate/gra7-2.vstat; ssh grb7 rm -rf /root/vmstate/gra7-2.vstat"
+saving gra7-2 to /root/vmstate/gra7-2.vstat ... 
+ssh gra7 virsh save gra7-2 /root/vmstate/gra7-2.vstat
+transferring /root/vmstate/gra7-2.vstat to grb7 ... 
+ssh gra7 globus-url-copy -p 14 /root/vmstate/gra7-2.vstat sshftp://grb7//root/vmstate/gra7-2.vstat
+restoring /root/vmstate/gra7-2.vstat from grb7... 
+ssh gra7 ssh grb7 virsh restore /root/vmstate/gra7-2.vstat
+gridftp 162.081206083 40.4665958881 52.1237881184 69.4908220768
+finish 164.299718142 1861.18166518
+released.
+ssh gra6 "virsh migrate --live gra6-2 qemu+ssh://grb6/system"
+ 29 has started.
+list=[ 30 ] mq=[ 29 ] susq=[ ]ssh gra6 "mkdir -p /root/vmstate; ssh grb6 mkdir -p /root/vmstate"
+
+waiting ...
+ssh gra6 "rm -rf /root/vmstate/gra6-2.vstat; ssh grb6 rm -rf /root/vmstate/gra6-2.vstat"
+saving gra6-2 to /root/vmstate/gra6-2.vstat ... 
+ssh gra6 virsh save gra6-2 /root/vmstate/gra6-2.vstat
+transferring /root/vmstate/gra6-2.vstat to grb6 ... 
+ssh gra6 globus-url-copy -p 14 /root/vmstate/gra6-2.vstat sshftp://grb6//root/vmstate/gra6-2.vstat
+restoring /root/vmstate/gra6-2.vstat from grb6... 
+ssh gra6 ssh grb6 virsh restore /root/vmstate/gra6-2.vstat
+gridftp 220.374176264 59.6914350986 75.0016281605 85.6811130047
+finish 224.172513008 2085.35501504
+released.
+ssh gra8 "virsh migrate --live gra8-1 qemu+ssh://grb8/system"
+ 30 has started.
+list=[ ] mq=[ 30 ] susq=[ssh gra8 "mkdir -p /root/vmstate; ssh grb8 mkdir -p /root/vmstate"
+ ]
+waiting ...
+ssh gra8 "rm -rf /root/vmstate/gra8-1.vstat; ssh grb8 rm -rf /root/vmstate/gra8-1.vstat"
+saving gra8-1 to /root/vmstate/gra8-1.vstat ... 
+ssh gra8 virsh save gra8-1 /root/vmstate/gra8-1.vstat
+transferring /root/vmstate/gra8-1.vstat to grb8 ... 
+ssh gra8 globus-url-copy -p 14 /root/vmstate/gra8-1.vstat sshftp://grb8//root/vmstate/gra8-1.vstat
+restoring /root/vmstate/gra8-1.vstat from grb8... 
+ssh gra8 ssh grb8 virsh restore /root/vmstate/gra8-1.vstat
+gridftp 315.748557329 115.769843102 90.7389030457 109.239811182
+finish 322.682142973 2408.03774405
+released.
+migrator done.
+real 2408.06
+user 1.53
+sys 0.89
+
+Fri Mar 29 09:52:19 2013
+----------------

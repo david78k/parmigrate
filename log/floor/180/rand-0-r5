@@ -1,0 +1,1501 @@
+Log of time -p /nfs/vmanage/controller/multiple.py -s rand -v 0 
+Fri Jan 25 08:46:09 2013
+
+scheduling is rand
+vm window is 0
+('1', 2, 'gra2', 'gra2-6', 1073152)
+('2', 2, 'gra2', 'gra2-1', 548864)
+('3', 4, 'gra4', 'gra4-3', 1073152)
+('4', 3, 'gra3', 'gra3-3', 548864)
+('5', 3, 'gra3', 'gra3-7', 548864)
+('6', 3, 'gra3', 'gra3-5', 548864)
+('7', 2, 'gra2', 'gra2-2', 548864)
+('8', 4, 'gra4', 'gra4-1', 1073152)
+('9', 5, 'gra5', 'gra5-2', 1073152)
+('10', 3, 'gra3', 'gra3-6', 548864)
+('11', 3, 'gra3', 'gra3-4', 548864)
+('12', 6, 'gra6', 'gra6-1', 1097728)
+('13', 2, 'gra2', 'gra2-3', 548864)
+('14', 1, 'gra1', 'gra1-3', 1073152)
+('15', 7, 'gra7', 'gra7-1', 2185216)
+('16', 8, 'gra8', 'gra8-1', 4370432)
+('17', 1, 'gra1', 'gra1-2', 548864)
+('18', 1, 'gra1', 'gra1-1', 548864)
+('19', 2, 'gra2', 'gra2-5', 1073152)
+('20', 3, 'gra3', 'gra3-2', 548864)
+('21', 4, 'gra4', 'gra4-4', 1073152)
+('22', 2, 'gra2', 'gra2-4', 548864)
+('23', 7, 'gra7', 'gra7-2', 2185216)
+('24', 3, 'gra3', 'gra3-1', 548864)
+('25', 3, 'gra3', 'gra3-8', 548864)
+('26', 4, 'gra4', 'gra4-2', 1073152)
+('27', 1, 'gra1', 'gra1-4', 2138112)
+('28', 5, 'gra5', 'gra5-1', 1097728)
+('29', 5, 'gra5', 'gra5-3', 2185216)
+('30', 6, 'gra6', 'gra6-2', 3201024)
+phase vwnd total avg totalvms threshold
+ssh gra2 "virsh migrate --live gra2-6 qemu+ssh://grb2/system"1 has started.
+list=[ 2 3 
+4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 ] susq=[ ]
+waiting ...
+controller ss 1 1667 1667 1 8
+released.
+ssh gra2 "virsh migrate --live gra2-1 qemu+ssh://grb2/system"2 has started.
+list=[ 3 4 5 6
+ 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 ] susq=[ ]
+waiting ...
+controller ss 2 146385 73192 2 8
+released.
+3 has started.ssh gra4 "virsh migrate --live gra4-3 qemu+ssh://grb4/system"
+
+list=[ 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 ] susq=[ ]
+released.
+ssh gra3 "virsh migrate --live gra3-3 qemu+ssh://grb3/system"
+ 4 has started.
+list=[ 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 ] susq=[ ]
+waiting ...
+controller ss 4 5484947 1371236 4 8
+released.
+ssh gra3 "virsh migrate --live gra3-7 qemu+ssh://grb3/system"5 has started.
+
+list=[ 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 ] susq=[ ]
+released.
+ssh gra3 "virsh migrate --live gra3-5 qemu+ssh://grb3/system"
+ 6 has started.
+list=[ 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 ] susq=[ ]
+released.
+ssh gra2 "virsh migrate --live gra2-2 qemu+ssh://grb2/system"
+ 7 has started.
+list=[ 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 ] susq=[ ]
+released.
+ssh gra4 "virsh migrate --live gra4-1 qemu+ssh://grb4/system"
+ 8 has started.
+list=[ 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 ] susq=[ ]
+waiting ...
+controller ss 8 26326276 3290784 8 8
+released.
+ssh gra5 "virsh migrate --live gra5-2 qemu+ssh://grb5/system"9 has started.
+
+list=[ 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 ] susq=[ ]
+waiting ...
+controller ca 9 39068501 4340944 9 8
+released.
+ssh gra3 "virsh migrate --live gra3-6 qemu+ssh://grb3/system"10 has started.
+
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 ] susq=[ ]
+waiting ...
+controller ca 10 48985220 4898522 10 8
+released.
+ssh gra3 "virsh migrate --live gra3-4 qemu+ssh://grb3/system"11 has started.
+
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 11 ] susq=[ ]
+waiting ...
+controller ca 11 40748110 3704373 11 8
+cvms=11 vwnd=8 rest=3 len(mq)=11
+1 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 2 3 4 5 6 7 8 9 10 11 ] susq=[ 1 ]
+2 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 4 5 6 7 8 9 10 11 ] susq=[ 1 2 ]
+3 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 5 6 7 8 9 10 11 ] susq=[ 1 2 3 ]
+waiting ...
+controller ca 8 42834110 5354263 8 8.25
+released.
+3 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 5 6 7 8 9 10 11 3 ] susq=[ 1 2 ]
+waiting ...
+controller ca 9 60591220 6732357 9 8.25
+released.
+2 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 5 6 7 8 9 10 11 3 2 ] susq=[ 1 ]
+waiting ...
+controller ca 10 54696110 5469611 10 8.25
+cvms=10 vwnd=7 rest=3 len(mq)=10
+4 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 6 7 8 9 10 11 3 2 ] susq=[ 1 4 ]
+5 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 6 7 8 9 10 11 3 2 ] susq=[ 1 4 5 ]
+6 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 7 8 9 10 11 3 2 ] susq=[ 1 4 5 6 ]
+waiting ...
+controller ca 7 42185304 6026472 7 7.5
+released.
+6 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 7 8 9 10 11 3 2 6 ] susq=[ 1 4 5 ]
+waiting ...
+controller ca 8 47114359 5889294 8 7.5
+cvms=8 vwnd=6 rest=2 len(mq)=8
+7 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 9 10 11 3 2 6 ] susq=[ 1 4 5 7 ]
+8 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 10 11 3 2 6 ] susq=[ 1 4 5 7 8 ]
+waiting ...
+controller ca 6 68777220 11462870 6 6.0
+released.
+8 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 10 11 3 2 6 8 ] susq=[ 1 4 5 7 ]
+waiting ...
+controller ca 7 60594220 8656317 7 6.0
+cvms=7 vwnd=5 rest=2 len(mq)=7
+9 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 10 11 3 2 6 8 ] susq=[ 1 4 5 7 9 ]
+10 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 11 3 2 6 8 ] susq=[ 1 4 5 7 9 10 ]
+waiting ...
+controller ca 5 64045220 12809044 5 5.25
+released.
+10 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 11 3 2 6 8 10 ] susq=[ 1 4 5 7 9 ]
+waiting ...
+controller ca 6 71308220 11884703 6 5.25
+cvms=6 vwnd=4 rest=2 len(mq)=6
+11 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 2 6 8 10 ] susq=[ 1 4 5 7 9 11 ]
+3 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 2 6 8 10 ] susq=[ 1 4 5 7 9 11 3 ]
+waiting ...
+controller ca 4 71323220 17830805 4 4.5
+released.
+3 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 2 6 8 10 3 ] susq=[ 1 4 5 7 9 11 ]
+waiting ...
+finish 94.6248669624 112.118702888
+released.
+11 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 6 8 10 3 11 ] susq=[ 1 4 5 7 9 ]
+waiting ...
+controller ca 5 60698220 12139644 5 4.5
+cvms=5 vwnd=3 rest=2 len(mq)=5
+6 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 10 3 11 ] susq=[ 1 4 5 7 9 6 ]
+8 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 10 3 11 ] susq=[ 1 4 5 7 9 6 8 ]
+waiting ...
+controller ca 3 64058220 21352740 3 3.75
+released.
+8 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 10 3 11 8 ] susq=[ 1 4 5 7 9 6 ]
+waiting ...
+controller ca 4 62390220 15597555 4 3.75
+cvms=4 vwnd=3 rest=1 len(mq)=4
+10 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 11 8 ] susq=[ 1 4 5 7 9 6 10 ]
+waiting ...
+Could not remove vminfo from mq.
+finish 96.2904400826 125.091660976
+released.
+10 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 11 8 10 ] susq=[ 1 4 5 7 9 6 ]
+waiting ...
+controller ca 3 62593359 20864453 3 3.0
+released.
+6 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 11 8 10 6 ] susq=[ 1 4 5 7 9 ]
+waiting ...
+Could not remove vminfo from mq.
+finish 109.874135017 133.121014833
+released.
+9 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 11 8 10 6 9 ] susq=[ 1 4 5 7 ]
+waiting ...
+controller ca 4 48948498 12237124 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=6
+3 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 11 8 10 6 9 ] susq=[ 1 4 5 7 3 ]
+waiting ...
+controller ca 3 39522359 13174119 3 3.0
+released.
+3 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 11 8 10 6 9 3 ] susq=[ 1 4 5 7 ]
+waiting ...
+finish 99.6929781437 145.452255011
+released.
+7 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 10 6 9 3 7 ] susq=[ 1 4 5 ]
+waiting ...
+controller ca 4 49287220 12321805 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=6
+8 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 10 6 9 3 7 ] susq=[ 1 4 5 8 ]
+waiting ...
+controller ca 3 52561220 17520406 3 3.0
+released.
+8 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 10 6 9 3 7 8 ] susq=[ 1 4 5 ]
+waiting ...
+controller ca 4 53886220 13471555 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=6
+10 has been suspended.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 6 9 3 7 8 ] susq=[ 1 4 5 10 ]
+waiting ...
+finish 130.564759016 159.467198849
+released.
+10 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 7 8 10 ] susq=[ 1 4 5 ]
+waiting ...
+Could not remove vminfo from mq.
+finish 152.9445889 164.287443876
+released.
+5 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 7 8 10 5 ] susq=[ 1 4 ]
+waiting ...
+controller ca 3 45635220 15211740 3 3.0
+released.
+4 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 7 8 10 5 4 ] susq=[ 1 ]
+waiting ...
+finish 124.839096069 164.944829941
+released.
+1 has been resumed.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 7 8 5 4 1 ] susq=[ ]
+waiting ...
+finish 138.444438934 167.447609901
+released.
+ssh gra6 "virsh migrate --live gra6-1 qemu+ssh://grb6/system"
+12 has started.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 8 5 4 1 12 ] susq=[ ]
+waiting ...
+controller ca 4 34966131 8741532 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=7
+9 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 8 5 4 1 12 ] susq=[ 9 ]
+waiting ...
+controller ca 3 21900983 7300327 3 3.0
+cvms=3 vwnd=2 rest=1 len(mq)=6
+3 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 5 4 1 12 ] susq=[ 9 3 ]
+waiting ...
+controller ca 2 24849165 12424582 2 2.25
+released.
+3 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 5 4 1 12 3 ] susq=[ 9 ]
+waiting ...
+controller ca 3 31515275 10505091 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=6
+8 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 4 1 12 3 ] susq=[ 9 8 ]
+waiting ...
+controller ca 2 23042553 11521276 2 2.25
+released.
+8 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 4 1 12 3 8 ] susq=[ 9 ]
+waiting ...
+controller ca 3 21045443 7015147 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=6
+5 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 1 12 3 8 ] susq=[ 9 5 ]
+waiting ...
+controller ca 2 24043359 12021679 2 2.25
+released.
+5 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 1 12 3 8 5 ] susq=[ 9 ]
+waiting ...
+controller ca 3 34000275 11333425 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=6
+4 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 12 3 8 5 ] susq=[ 9 4 ]
+waiting ...
+controller ca 2 21169275 10584637 2 2.25
+cvms=2 vwnd=1 rest=1 len(mq)=5
+1 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 3 8 5 ] susq=[ 9 4 1 ]
+waiting ...
+controller ca 1 21972220 21972220 1 1.5
+released.
+1 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 3 8 5 1 ] susq=[ 9 4 ]
+waiting ...
+finish 193.664241076 222.768779039
+released.
+4 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 3 5 1 4 ] susq=[ 9 ]
+waiting ...
+controller ca 2 16131275 8065637 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=5
+12 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 1 4 ] susq=[ 9 12 ]
+waiting ...
+Could not remove vminfo from mq.
+finish 197.073641062 231.525429964
+released.
+12 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 1 4 12 ] susq=[ 9 ]
+waiting ...
+controller ca 1 20167275 20167275 1 1.5
+released.
+9 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 1 4 12 9 ] susq=[ ]
+waiting ...
+controller ca 2 16000441 8000220 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+3 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 4 12 9 ] susq=[ 3 ]
+waiting ...
+controller ca 1 17000385 17000385 1 1.5
+released.
+3 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 4 12 9 3 ] susq=[ ]
+waiting ...
+controller ca 2 17000330 8500165 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+5 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 4 12 9 3 ] susq=[ 5 ]
+waiting ...
+controller ca 1 17000428 17000428 1 1.5
+released.
+5 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 4 12 9 3 5 ] susq=[ ]
+waiting ...
+controller ca 2 16000857 8000428 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+1 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 12 9 3 5 ] susq=[ 1 ]
+waiting ...
+controller ca 1 17000524 17000524 1 1.5
+released.
+1 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 12 9 3 5 1 ] susq=[ ]
+waiting ...
+controller ca 2 17000330 8500165 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+4 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 9 3 5 1 ] susq=[ 4 ]
+waiting ...
+controller ca 1 590 590 1 1.5
+waiting ...
+controller ca 1 440 440 1 0.75
+waiting ...
+controller ca 1 440 440 1 0.75
+released.
+4 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 9 3 5 1 4 ] susq=[ ]
+waiting ...
+controller ca 2 496 248 2 0.75
+cvms=2 vwnd=1 rest=1 len(mq)=6
+12 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 5 1 4 ] susq=[ 12 ]
+waiting ...
+controller ca 1 441 441 1 1.5
+released.
+12 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 5 1 4 12 ] susq=[ ]
+waiting ...
+controller ca 2 440 220 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+9 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 1 4 12 ] susq=[ 9 ]
+waiting ...
+controller ca 1 330 330 1 1.5
+released.
+9 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 1 4 12 9 ] susq=[ ]
+waiting ...
+controller ca 2 608 304 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+3 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 4 12 9 ] susq=[ 3 ]
+waiting ...
+controller ca 1 1051 1051 1 1.5
+released.
+3 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 4 12 9 3 ] susq=[ ]
+waiting ...
+controller ca 2 579 289 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+5 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 4 12 9 3 ] susq=[ 5 ]
+waiting ...
+controller ca 1 385 385 1 1.5
+released.
+5 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 4 12 9 3 5 ] susq=[ ]
+waiting ...
+controller ca 2 440 220 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+1 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 12 9 3 5 ] susq=[ 1 ]
+waiting ...
+controller ca 1 385 385 1 1.5
+released.
+1 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 12 9 3 5 1 ] susq=[ ]
+waiting ...
+controller ca 2 385 192 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+4 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 9 3 5 1 ] susq=[ 4 ]
+waiting ...
+controller ca 1 496 496 1 1.5
+released.
+4 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 9 3 5 1 4 ] susq=[ ]
+waiting ...
+controller ca 2 496 248 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+12 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 5 1 4 ] susq=[ 12 ]
+waiting ...
+controller ca 1 330 330 1 1.5
+released.
+12 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 5 1 4 12 ] susq=[ ]
+waiting ...
+controller ca 2 440 220 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+9 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 1 4 12 ] susq=[ 9 ]
+waiting ...
+controller ca 1 718 718 1 1.5
+released.
+9 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 1 4 12 9 ] susq=[ ]
+waiting ...
+controller ca 2 857 428 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+3 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 4 12 9 ] susq=[ 3 ]
+waiting ...
+controller ca 1 579 579 1 1.5
+released.
+3 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 4 12 9 3 ] susq=[ ]
+waiting ...
+controller ca 2 440 220 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+5 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 4 12 9 3 ] susq=[ 5 ]
+waiting ...
+controller ca 1 440 440 1 1.5
+released.
+5 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 4 12 9 3 5 ] susq=[ ]
+waiting ...
+controller ca 2 330 165 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=6
+1 has been suspended.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 12 9 3 5 ] susq=[ 1 ]
+waiting ...
+controller ca 1 385 385 1 1.5
+released.
+1 has been resumed.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 12 9 3 5 1 ] susq=[ ]
+waiting ...
+controller ca 2 11441 5720 2 1.5
+released.
+ssh gra2 "virsh migrate --live gra2-3 qemu+ssh://grb2/system"13 has started.
+
+list=[ 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 12 9 3 5 1 13 ] susq=[ ]
+waiting ...
+controller ca 3 1654 551 3 1.5
+cvms=3 vwnd=2 rest=1 len(mq)=7
+4 has been suspended.
+list=[ 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 9 3 5 1 13 ] susq=[ 4 ]
+waiting ...
+controller ca 2 149220 74610 2 2.25
+released.
+4 has been resumed.
+list=[ 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 9 3 5 1 13 4 ] susq=[ ]
+waiting ...
+controller ca 3 5418385 1806128 3 2.25
+released.
+ssh gra1 "virsh migrate --live gra1-3 qemu+ssh://grb1/system"14 has started.
+
+list=[ 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 9 3 5 1 13 4 14 ] susq=[ ]
+waiting ...
+controller ca 4 15001805 3750451 4 2.25
+released.
+ssh gra7 "virsh migrate --live gra7-1 qemu+ssh://grb7/system"15 has started.
+
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 9 3 5 1 13 4 14 15 ] susq=[ ]
+waiting ...
+controller ca 5 15078222 3015644 5 2.25
+cvms=5 vwnd=3 rest=2 len(mq)=9
+12 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 5 1 13 4 14 15 ] susq=[ 12 ]
+9 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 1 13 4 14 15 ] susq=[ 12 9 ]
+waiting ...
+controller ca 3 20922522 6974174 3 3.75
+released.
+9 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 1 13 4 14 15 9 ] susq=[ 12 ]
+waiting ...
+controller ca 4 23361220 5840305 4 3.75
+cvms=4 vwnd=3 rest=1 len(mq)=8
+3 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 13 4 14 15 9 ] susq=[ 12 3 ]
+waiting ...
+controller ca 3 26943165 8981055 3 3.0
+released.
+3 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 13 4 14 15 9 3 ] susq=[ 12 ]
+waiting ...
+controller ca 4 26729275 6682318 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=8
+5 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 13 4 14 15 9 3 ] susq=[ 12 5 ]
+waiting ...
+controller ca 3 35000275 11666758 3 3.0
+released.
+5 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 13 4 14 15 9 3 5 ] susq=[ 12 ]
+waiting ...
+controller ca 4 27371165 6842791 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=8
+1 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 13 4 14 15 9 3 5 ] susq=[ 12 1 ]
+waiting ...
+finish 62.2790019512 481.020680904
+released.
+1 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 14 15 9 3 5 1 ] susq=[ 12 ]
+waiting ...
+controller ca 3 18185601 6061867 3 3.0
+cvms=3 vwnd=2 rest=1 len(mq)=7
+4 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 14 15 9 3 5 1 ] susq=[ 12 4 ]
+waiting ...
+controller ca 2 20672330 10336165 2 2.25
+released.
+4 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 14 15 9 3 5 1 4 ] susq=[ 12 ]
+waiting ...
+controller ca 3 28007383 9335794 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+14 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 15 9 3 5 1 4 ] susq=[ 12 14 ]
+waiting ...
+controller ca 2 19001469 9500734 2 2.25
+released.
+14 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 15 9 3 5 1 4 14 ] susq=[ 12 ]
+waiting ...
+controller ca 3 19586802 6528934 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+15 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 5 1 4 14 ] susq=[ 12 15 ]
+waiting ...
+controller ca 2 19833469 9916734 2 2.25
+released.
+15 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 5 1 4 14 15 ] susq=[ 12 ]
+waiting ...
+controller ca 3 24000330 8000110 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+9 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 1 4 14 15 ] susq=[ 12 9 ]
+waiting ...
+controller ca 2 17633275 8816637 2 2.25
+released.
+9 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 1 4 14 15 9 ] susq=[ 12 ]
+waiting ...
+controller ca 3 18837330 6279110 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+3 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 4 14 15 9 ] susq=[ 12 3 ]
+waiting ...
+controller ca 2 20000275 10000137 2 2.25
+released.
+3 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 4 14 15 9 3 ] susq=[ 12 ]
+waiting ...
+controller ca 3 24000331 8000110 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+5 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 4 14 15 9 3 ] susq=[ 12 5 ]
+waiting ...
+controller ca 2 22000386 11000193 2 2.25
+released.
+5 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 4 14 15 9 3 5 ] susq=[ 12 ]
+waiting ...
+finish 115.109390974 550.803282976
+released.
+12 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 4 15 9 3 5 12 ] susq=[ ]
+waiting ...
+controller ca 3 14694330 4898110 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+1 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 15 9 3 5 12 ] susq=[ 1 ]
+waiting ...
+controller ca 2 12000385 6000192 2 2.25
+released.
+1 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 15 9 3 5 12 1 ] susq=[ ]
+waiting ...
+controller ca 3 13000663 4333554 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+4 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 15 9 3 5 12 1 ] susq=[ 4 ]
+waiting ...
+controller ca 2 15000677 7500338 2 2.25
+released.
+4 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 15 9 3 5 12 1 4 ] susq=[ ]
+waiting ...
+controller ca 3 15000469 5000156 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+15 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 5 12 1 4 ] susq=[ 15 ]
+waiting ...
+controller ca 2 15000385 7500192 2 2.25
+released.
+15 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 5 12 1 4 15 ] susq=[ ]
+waiting ...
+controller ca 3 15000330 5000110 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+9 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 12 1 4 15 ] susq=[ 9 ]
+waiting ...
+controller ca 2 15000275 7500137 2 2.25
+released.
+9 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 12 1 4 15 9 ] susq=[ ]
+waiting ...
+controller ca 3 15000385 5000128 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+3 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 12 1 4 15 9 ] susq=[ 3 ]
+waiting ...
+controller ca 2 15000441 7500220 2 2.25
+released.
+3 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 12 1 4 15 9 3 ] susq=[ ]
+waiting ...
+controller ca 3 15000331 5000110 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+5 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 1 4 15 9 3 ] susq=[ 5 ]
+waiting ...
+controller ca 2 15000385 7500192 2 2.25
+released.
+5 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 1 4 15 9 3 5 ] susq=[ ]
+waiting ...
+controller ca 3 15000385 5000128 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+12 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 4 15 9 3 5 ] susq=[ 12 ]
+waiting ...
+controller ca 2 15000663 7500331 2 2.25
+released.
+12 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 4 15 9 3 5 12 ] susq=[ ]
+waiting ...
+controller ca 3 15000857 5000285 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+1 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 15 9 3 5 12 ] susq=[ 1 ]
+waiting ...
+controller ca 2 15000524 7500262 2 2.25
+released.
+1 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 15 9 3 5 12 1 ] susq=[ ]
+waiting ...
+finish 202.570631981 643.913486958
+released.
+ssh gra8 "virsh migrate --live gra8-1 qemu+ssh://grb8/system"
+16 has started.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 9 3 5 12 1 16 ] susq=[ ]
+waiting ...
+controller ca 3 13000440 4333480 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=7
+4 has been suspended.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 3 5 12 1 16 ] susq=[ 4 ]
+waiting ...
+controller ca 2 1494 747 2 2.25
+cvms=2 vwnd=1 rest=1 len(mq)=6
+9 has been suspended.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 12 1 16 ] susq=[ 4 9 ]
+waiting ...
+controller ca 1 143275 143275 1 1.5
+released.
+9 has been resumed.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 12 1 16 9 ] susq=[ 4 ]
+waiting ...
+controller ca 2 7818385 3909192 2 1.5
+released.
+4 has been resumed.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 12 1 16 9 4 ] susq=[ ]
+waiting ...
+controller ca 3 14000441 4666813 3 1.5
+released.
+ssh gra1 "virsh migrate --live gra1-2 qemu+ssh://grb1/system"17 has started.
+
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 12 1 16 9 4 17 ] susq=[ ]
+waiting ...
+controller ca 4 14001654 3500413 4 1.5
+cvms=4 vwnd=3 rest=1 len(mq)=8
+3 has been suspended.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 12 1 16 9 4 17 ] susq=[ 3 ]
+waiting ...
+controller ca 3 14201330 4733776 3 3.0
+released.
+3 has been resumed.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 12 1 16 9 4 17 3 ] susq=[ ]
+waiting ...
+controller ca 4 18593275 4648318 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=8
+5 has been suspended.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 1 16 9 4 17 3 ] susq=[ 5 ]
+waiting ...
+controller ca 3 25000469 8333489 3 3.0
+released.
+5 has been resumed.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 1 16 9 4 17 3 5 ] susq=[ ]
+waiting ...
+controller ca 4 26000941 6500235 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=8
+12 has been suspended.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 16 9 4 17 3 5 ] susq=[ 12 ]
+waiting ...
+controller ca 3 26000275 8666758 3 3.0
+released.
+12 has been resumed.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 16 9 4 17 3 5 12 ] susq=[ ]
+waiting ...
+controller ca 4 16725220 4181305 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=8
+1 has been suspended.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 16 9 4 17 3 5 12 ] susq=[ 1 ]
+waiting ...
+controller ca 3 17345330 5781776 3 3.0
+released.
+1 has been resumed.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 16 9 4 17 3 5 12 1 ] susq=[ ]
+waiting ...
+controller ca 4 19113330 4778332 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=8
+16 has been suspended.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 4 17 3 5 12 1 ] susq=[ 16 ]
+waiting ...
+controller ca 3 25000220 8333406 3 3.0
+released.
+16 has been resumed.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 4 17 3 5 12 1 16 ] susq=[ ]
+waiting ...
+controller ca 4 26000386 6500096 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=8
+9 has been suspended.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 17 3 5 12 1 16 ] susq=[ 9 ]
+waiting ...
+controller ca 3 24000386 8000128 3 3.0
+released.
+9 has been resumed.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 17 3 5 12 1 16 9 ] susq=[ ]
+waiting ...
+finish 68.1621460915 735.540035009
+released.
+ssh gra1 "virsh migrate --live gra1-1 qemu+ssh://grb1/system"
+18 has started.
+list=[ 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 3 5 12 1 16 9 18 ] susq=[ ]
+waiting ...
+controller ca 4 13001827 3250456 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=8
+4 has been suspended.
+list=[ 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 12 1 16 9 18 ] susq=[ 4 ]
+waiting ...
+controller ca 3 13106330 4368776 3 3.0
+released.
+4 has been resumed.
+list=[ 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 12 1 16 9 18 4 ] susq=[ ]
+waiting ...
+controller ca 4 19162469 4790617 4 3.0
+released.
+ssh gra2 "virsh migrate --live gra2-5 qemu+ssh://grb2/system"19 has started.
+
+list=[ 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 5 12 1 16 9 18 4 19 ] susq=[ ]
+waiting ...
+controller ca 5 25002209 5000441 5 3.0
+released.
+ssh gra3 "virsh migrate --live gra3-2 qemu+ssh://grb3/system"20 has started.
+list=[ 21 22 23 24
+ 25 26 27 28 29 30 ] mq=[ 3 5 12 1 16 9 18 4 19 20 ] susq=[ ]
+waiting ...
+controller ca 6 23101556 3850259 6 3.0
+cvms=6 vwnd=4 rest=2 len(mq)=10
+3 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 12 1 16 9 18 4 19 20 ] susq=[ 3 ]
+5 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 1 16 9 18 4 19 20 ] susq=[ 3 5 ]
+waiting ...
+controller ca 4 27278165 6819541 4 4.5
+released.
+5 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 1 16 9 18 4 19 20 5 ] susq=[ 3 ]
+waiting ...
+controller ca 5 21315220 4263044 5 4.5
+cvms=5 vwnd=3 rest=2 len(mq)=9
+12 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 16 9 18 4 19 20 5 ] susq=[ 3 12 ]
+1 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 16 9 18 4 19 20 5 ] susq=[ 3 12 1 ]
+waiting ...
+controller ca 3 21577220 7192406 3 3.75
+released.
+1 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 16 9 18 4 19 20 5 1 ] susq=[ 3 12 ]
+waiting ...
+controller ca 4 24358110 6089527 4 3.75
+cvms=4 vwnd=3 rest=1 len(mq)=8
+16 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 18 4 19 20 5 1 ] susq=[ 3 12 16 ]
+waiting ...
+controller ca 3 39059276 13019758 3 3.0
+released.
+16 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 18 4 19 20 5 1 16 ] susq=[ 3 12 ]
+waiting ...
+controller ca 4 28550276 7137569 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=8
+9 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 18 4 19 20 5 1 16 ] susq=[ 3 12 9 ]
+waiting ...
+controller ca 3 27903220 9301073 3 3.0
+released.
+9 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 18 4 19 20 5 1 16 9 ] susq=[ 3 12 ]
+waiting ...
+controller ca 4 30241220 7560305 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=8
+18 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 19 20 5 1 16 9 ] susq=[ 3 12 18 ]
+waiting ...
+Could not remove vminfo from mq.
+finish 77.0145909786 812.555160999
+released.
+18 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 19 20 5 1 16 9 18 ] susq=[ 3 12 ]
+waiting ...
+controller ca 3 42264165 14088055 3 3.0
+released.
+12 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 19 20 5 1 16 9 18 12 ] susq=[ 3 ]
+waiting ...
+controller ca 4 29904651 7476162 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=9
+4 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 19 20 5 1 16 9 18 12 ] susq=[ 3 4 ]
+waiting ...
+controller ca 3 32154275 10718091 3 3.0
+released.
+4 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 19 20 5 1 16 9 18 12 4 ] susq=[ 3 ]
+waiting ...
+controller ca 4 34370275 8592568 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=9
+19 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 20 5 1 16 9 18 12 4 ] susq=[ 3 19 ]
+waiting ...
+controller ca 3 28614220 9538073 3 3.0
+released.
+19 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 20 5 1 16 9 18 12 4 19 ] susq=[ 3 ]
+waiting ...
+controller ca 4 29145275 7286318 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=9
+20 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 16 9 18 12 4 19 ] susq=[ 3 20 ]
+waiting ...
+Could not remove vminfo from mq.
+finish 88.4893682003 846.288614035
+released.
+20 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 16 9 18 12 4 19 20 ] susq=[ 3 ]
+waiting ...
+controller ca 3 25754275 8584758 3 3.0
+released.
+3 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 1 16 9 18 12 4 19 20 3 ] susq=[ ]
+waiting ...
+controller ca 4 23000331 5750082 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=10
+5 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 16 9 18 12 4 19 20 3 ] susq=[ 5 ]
+waiting ...
+controller ca 3 12979386 4326462 3 3.0
+cvms=3 vwnd=2 rest=1 len(mq)=9
+1 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 16 9 18 12 4 19 20 3 ] susq=[ 5 1 ]
+waiting ...
+controller ca 2 13115330 6557665 2 2.25
+released.
+1 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 16 9 18 12 4 19 20 3 1 ] susq=[ 5 ]
+waiting ...
+controller ca 3 14082330 4694110 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=9
+16 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 18 12 4 19 20 3 1 ] susq=[ 5 16 ]
+waiting ...
+controller ca 2 22000469 11000234 2 2.25
+released.
+16 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 18 12 4 19 20 3 1 16 ] susq=[ 5 ]
+waiting ...
+controller ca 3 25000761 8333587 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=9
+9 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 18 12 4 19 20 3 1 16 ] susq=[ 5 9 ]
+waiting ...
+finish 129.976945877 882.126418829
+released.
+9 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 18 12 4 20 3 1 16 9 ] susq=[ 5 ]
+waiting ...
+controller ca 2 11000601 5500300 2 2.25
+cvms=2 vwnd=1 rest=1 len(mq)=8
+18 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 4 20 3 1 16 9 ] susq=[ 5 18 ]
+waiting ...
+controller ca 1 12000330 12000330 1 1.5
+released.
+18 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 4 20 3 1 16 9 18 ] susq=[ 5 ]
+waiting ...
+controller ca 2 12000275 6000137 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+12 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 20 3 1 16 9 18 ] susq=[ 5 12 ]
+waiting ...
+controller ca 1 14000385 14000385 1 1.5
+released.
+12 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 20 3 1 16 9 18 12 ] susq=[ 5 ]
+waiting ...
+controller ca 2 15000385 7500192 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+4 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 20 3 1 16 9 18 12 ] susq=[ 5 4 ]
+waiting ...
+controller ca 1 14000441 14000441 1 1.5
+released.
+4 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 20 3 1 16 9 18 12 4 ] susq=[ 5 ]
+waiting ...
+controller ca 2 15000441 7500220 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+20 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 1 16 9 18 12 4 ] susq=[ 5 20 ]
+waiting ...
+controller ca 1 15000330 15000330 1 1.5
+released.
+20 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 1 16 9 18 12 4 20 ] susq=[ 5 ]
+waiting ...
+controller ca 2 13000330 6500165 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+3 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 16 9 18 12 4 20 ] susq=[ 5 3 ]
+waiting ...
+controller ca 1 15000663 15000663 1 1.5
+released.
+3 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 16 9 18 12 4 20 3 ] susq=[ 5 ]
+waiting ...
+controller ca 2 14000996 7000498 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+1 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 16 9 18 12 4 20 3 ] susq=[ 5 1 ]
+waiting ...
+controller ca 1 14000275 14000275 1 1.5
+released.
+1 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 16 9 18 12 4 20 3 1 ] susq=[ 5 ]
+waiting ...
+controller ca 2 15000385 7500192 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+16 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 18 12 4 20 3 1 ] susq=[ 5 16 ]
+waiting ...
+controller ca 1 14000385 14000385 1 1.5
+released.
+16 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 18 12 4 20 3 1 16 ] susq=[ 5 ]
+waiting ...
+controller ca 2 14000330 7000165 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+9 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 18 12 4 20 3 1 16 ] susq=[ 5 9 ]
+waiting ...
+controller ca 1 14000385 14000385 1 1.5
+released.
+9 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 18 12 4 20 3 1 16 9 ] susq=[ 5 ]
+waiting ...
+controller ca 2 15000441 7500220 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+18 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 4 20 3 1 16 9 ] susq=[ 5 18 ]
+waiting ...
+controller ca 1 14000441 14000441 1 1.5
+released.
+18 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 4 20 3 1 16 9 18 ] susq=[ 5 ]
+waiting ...
+controller ca 2 14000385 7000192 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+12 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 20 3 1 16 9 18 ] susq=[ 5 12 ]
+waiting ...
+controller ca 1 14000330 14000330 1 1.5
+released.
+12 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 20 3 1 16 9 18 12 ] susq=[ 5 ]
+waiting ...
+controller ca 2 14000663 7000331 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+4 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 20 3 1 16 9 18 12 ] susq=[ 5 4 ]
+waiting ...
+controller ca 1 15000941 15000941 1 1.5
+released.
+4 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 20 3 1 16 9 18 12 4 ] susq=[ 5 ]
+waiting ...
+controller ca 2 14000275 7000137 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+20 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 1 16 9 18 12 4 ] susq=[ 5 20 ]
+waiting ...
+controller ca 1 15000385 15000385 1 1.5
+released.
+20 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 1 16 9 18 12 4 20 ] susq=[ 5 ]
+waiting ...
+controller ca 2 14000385 7000192 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+3 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 16 9 18 12 4 20 ] susq=[ 5 3 ]
+waiting ...
+controller ca 1 15000385 15000385 1 1.5
+released.
+3 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 16 9 18 12 4 20 3 ] susq=[ 5 ]
+waiting ...
+controller ca 2 15000385 7500192 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+1 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 16 9 18 12 4 20 3 ] susq=[ 5 1 ]
+waiting ...
+finish 395.070125818 1038.98409986
+released.
+1 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 18 12 4 20 3 1 ] susq=[ 5 ]
+waiting ...
+controller ca 1 9184386 9184386 1 1.5
+released.
+5 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 18 12 4 20 3 1 5 ] susq=[ ]
+waiting ...
+controller ca 2 399 199 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+9 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 18 12 4 20 3 1 5 ] susq=[ 9 ]
+waiting ...
+controller ca 1 440 440 1 1.5
+released.
+9 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 18 12 4 20 3 1 5 9 ] susq=[ ]
+waiting ...
+controller ca 2 440 220 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=8
+18 has been suspended.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 4 20 3 1 5 9 ] susq=[ 18 ]
+waiting ...
+controller ca 1 414 414 1 1.5
+released.
+18 has been resumed.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 4 20 3 1 5 9 18 ] susq=[ ]
+waiting ...
+controller ca 2 1051 525 2 1.5
+released.
+ssh gra4 "virsh migrate --live gra4-4 qemu+ssh://grb4/system"21 has started.
+
+list=[ 22 23 24 25 26 27 28 29 30 ] mq=[ 12 4 20 3 1 5 9 18 21 ] susq=[ ]
+waiting ...
+controller ca 3 1860 620 3 1.5
+released.
+ssh gra2 "virsh migrate --live gra2-4 qemu+ssh://grb2/system"22 has started.
+
+list=[ 23 24 25 26 27 28 29 30 ] mq=[ 12 4 20 3 1 5 9 18 21 22 ] susq=[ ]
+waiting ...
+controller ca 4 70598 17649 4 1.5
+released.
+ssh gra7 "virsh migrate --live gra7-2 qemu+ssh://grb7/system"23 has started.
+
+list=[ 24 25 26 27 28 29 30 ] mq=[ 12 4 20 3 1 5 9 18 21 22 23 ] susq=[ ]
+waiting ...
+controller ca 5 5664611 1132922 5 1.5
+released.
+ssh gra3 "virsh migrate --live gra3-1 qemu+ssh://grb3/system"24 has started.
+list=[
+ 25 26 27 28 29 30 ] mq=[ 12 4 20 3 1 5 9 18 21 22 23 24 ] susq=[ ]
+waiting ...
+controller ca 6 18006556 3001092 6 1.5
+released.
+ssh gra3 "virsh migrate --live gra3-8 qemu+ssh://grb3/system"25 has started.
+list=[ 26 27 28 
+29 30 ] mq=[ 12 4 20 3 1 5 9 18 21 22 23 24 25 ] susq=[ ]
+waiting ...
+controller ca 7 23759220 3394174 7 1.5
+released.
+ssh gra4 "virsh migrate --live gra4-2 qemu+ssh://grb4/system"26 has started.
+
+list=[ 27 28 29 30 ] mq=[ 12 4 20 3 1 5 9 18 21 22 23 24 25 26 ] susq=[ ]
+waiting ...
+controller ca 8 31860276 3982534 8 1.5
+released.
+ssh gra1 "virsh migrate --live gra1-4 qemu+ssh://grb1/system"27 has started.
+
+list=[ 28 29 30 ] mq=[ 12 4 20 3 1 5 9 18 21 22 23 24 25 26 27 ] susq=[ ]
+waiting ...
+controller ca 9 37354502 4150500 9 1.5
+released.
+ssh gra5 "virsh migrate --live gra5-1 qemu+ssh://grb5/system"28 has started.
+list=[ 29 30 ] 
+mq=[ 12 4 20 3 1 5 9 18 21 22 23 24 25 26 27 28 ] susq=[ ]
+waiting ...
+controller ca 10 42982446 4298244 10 1.5
+released.
+ssh gra5 "virsh migrate --live gra5-3 qemu+ssh://grb5/system"29 has started.
+list=[ 30 ] 
+mq=[ 12 4 20 3 1 5 9 18 21 22 23 24 25 26 27 28 29 ] susq=[ ]
+waiting ...
+controller ca 11 42658055 3878005 11 1.5
+cvms=11 vwnd=8 rest=3 len(mq)=17
+12 has been suspended.
+list=[ 30 ] mq=[ 4 20 3 1 5 9 18 21 22 23 24 25 26 27 28 29 ] susq=[ 12 ]
+4 has been suspended.
+list=[ 30 ] mq=[ 20 3 1 5 9 18 21 22 23 24 25 26 27 28 29 ] susq=[ 12 4 ]
+20 has been suspended.
+list=[ 30 ] mq=[ 3 1 5 9 18 21 22 23 24 25 26 27 28 29 ] susq=[ 12 4 20 ]
+waiting ...
+controller ca 8 47994055 5999256 8 8.25
+released.
+20 has been resumed.
+list=[ 30 ] mq=[ 3 1 5 9 18 21 22 23 24 25 26 27 28 29 20 ] susq=[ 12 4 ]
+waiting ...
+controller ca 9 53214249 5912694 9 8.25
+cvms=9 vwnd=6 rest=3 len(mq)=15
+3 has been suspended.
+list=[ 30 ] mq=[ 1 5 9 18 21 22 23 24 25 26 27 28 29 20 ] susq=[ 12 4 3 ]
+1 has been suspended.
+list=[ 30 ] mq=[ 5 9 18 21 22 23 24 25 26 27 28 29 20 ] susq=[ 12 4 3 1 ]
+5 has been suspended.
+list=[ 30 ] mq=[ 9 18 21 22 23 24 25 26 27 28 29 20 ] susq=[ 12 4 3 1 5 ]
+waiting ...
+controller ca 6 52533055 8755509 6 6.75
+released.
+5 has been resumed.
+list=[ 30 ] mq=[ 9 18 21 22 23 24 25 26 27 28 29 20 5 ] susq=[ 12 4 3 1 ]
+waiting ...
+controller ca 7 63052110 9007444 7 6.75
+released.
+1 has been resumed.
+list=[ 30 ] mq=[ 9 18 21 22 23 24 25 26 27 28 29 20 5 1 ] susq=[ 12 4 3 ]
+waiting ...
+controller ca 8 50536110 6317013 8 6.75
+cvms=8 vwnd=6 rest=2 len(mq)=14
+9 has been suspended.
+list=[ 30 ] mq=[ 18 21 22 23 24 25 26 27 28 29 20 5 1 ] susq=[ 12 4 3 9 ]
+18 has been suspended.
+list=[ 30 ] mq=[ 21 22 23 24 25 26 27 28 29 20 5 1 ] susq=[ 12 4 3 9 18 ]
+waiting ...
+controller ca 6 51074110 8512351 6 6.0
+released.
+18 has been resumed.
+list=[ 30 ] mq=[ 21 22 23 24 25 26 27 28 29 20 5 1 18 ] susq=[ 12 4 3 9 ]
+waiting ...
+controller ca 7 57004110 8143444 7 6.0
+cvms=7 vwnd=5 rest=2 len(mq)=13
+21 has been suspended.
+list=[ 30 ] mq=[ 22 23 24 25 26 27 28 29 20 5 1 18 ] susq=[ 12 4 3 9 21 ]
+22 has been suspended.
+list=[ 30 ] mq=[ 23 24 25 26 27 28 29 20 5 1 18 ] susq=[ 12 4 3 9 21 22 ]
+waiting ...
+controller ca 5 59330110 11866022 5 5.25
+released.
+22 has been resumed.
+list=[ 30 ] mq=[ 23 24 25 26 27 28 29 20 5 1 18 22 ] susq=[ 12 4 3 9 21 ]
+waiting ...
+controller ca 6 39490110 6581685 6 5.25
+cvms=6 vwnd=4 rest=2 len(mq)=12
+23 has been suspended.
+list=[ 30 ] mq=[ 24 25 26 27 28 29 20 5 1 18 22 ] susq=[ 12 4 3 9 21 23 ]
+24 has been suspended.
+list=[ 30 ] mq=[ 25 26 27 28 29 20 5 1 18 22 ] susq=[ 12 4 3 9 21 23 24 ]
+waiting ...
+controller ca 4 41898110 10474527 4 4.5
+released.
+24 has been resumed.
+list=[ 30 ] mq=[ 25 26 27 28 29 20 5 1 18 22 24 ] susq=[ 12 4 3 9 21 23 ]
+waiting ...
+controller ca 5 56341110 11268222 5 4.5
+released.
+23 has been resumed.
+list=[ 30 ] mq=[ 25 26 27 28 29 20 5 1 18 22 24 23 ] susq=[ 12 4 3 9 21 ]
+waiting ...
+finish 109.513799906 1183.71904087
+released.
+21 has been resumed.
+list=[ 30 ] mq=[ 25 26 27 28 29 20 5 1 18 24 23 21 ] susq=[ 12 4 3 9 ]
+waiting ...
+controller ca 6 59384110 9897351 6 4.5
+cvms=6 vwnd=4 rest=2 len(mq)=12
+25 has been suspended.
+list=[ 30 ] mq=[ 26 27 28 29 20 5 1 18 24 23 21 ] susq=[ 12 4 3 9 25 ]
+26 has been suspended.
+list=[ 30 ] mq=[ 27 28 29 20 5 1 18 24 23 21 ] susq=[ 12 4 3 9 25 26 ]
+waiting ...
+controller ca 4 47046249 11761562 4 4.5
+released.
+26 has been resumed.
+list=[ 30 ] mq=[ 27 28 29 20 5 1 18 24 23 21 26 ] susq=[ 12 4 3 9 25 ]
+waiting ...
+controller ca 5 49246304 9849260 5 4.5
+cvms=5 vwnd=3 rest=2 len(mq)=11
+27 has been suspended.
+list=[ 30 ] mq=[ 28 29 20 5 1 18 24 23 21 26 ] susq=[ 12 4 3 9 25 27 ]
+28 has been suspended.
+list=[ 30 ] mq=[ 29 20 5 1 18 24 23 21 26 ] susq=[ 12 4 3 9 25 27 28 ]
+waiting ...
+controller ca 3 62221165 20740388 3 3.75
+released.
+28 has been resumed.
+list=[ 30 ] mq=[ 29 20 5 1 18 24 23 21 26 28 ] susq=[ 12 4 3 9 25 27 ]
+waiting ...
+Could not remove vminfo from mq.
+finish 113.537059069 1204.69997501
+released.
+27 has been resumed.
+list=[ 30 ] mq=[ 29 20 5 1 18 24 23 21 26 28 27 ] susq=[ 12 4 3 9 25 ]
+waiting ...
+controller ca 4 49848165 12462041 4 3.75
+cvms=4 vwnd=3 rest=1 len(mq)=11
+29 has been suspended.
+list=[ 30 ] mq=[ 20 5 1 18 24 23 21 26 28 27 ] susq=[ 12 4 3 9 25 29 ]
+waiting ...
+finish 127.809298992 1213.32140088
+released.
+29 has been resumed.
+list=[ 30 ] mq=[ 20 5 1 18 23 21 26 28 27 29 ] susq=[ 12 4 3 9 25 ]
+waiting ...
+controller ca 3 40150165 13383388 3 3.0
+released.
+25 has been resumed.
+list=[ 30 ] mq=[ 20 5 1 18 23 21 26 28 27 29 25 ] susq=[ 12 4 3 9 ]
+waiting ...
+controller ca 4 42106220 10526555 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=11
+20 has been suspended.
+list=[ 30 ] mq=[ 5 1 18 23 21 26 28 27 29 25 ] susq=[ 12 4 3 9 20 ]
+waiting ...
+controller ca 3 51137220 17045740 3 3.0
+released.
+20 has been resumed.
+list=[ 30 ] mq=[ 5 1 18 23 21 26 28 27 29 25 20 ] susq=[ 12 4 3 9 ]
+waiting ...
+controller ca 4 47382220 11845555 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=11
+5 has been suspended.
+list=[ 30 ] mq=[ 1 18 23 21 26 28 27 29 25 20 ] susq=[ 12 4 3 9 5 ]
+waiting ...
+finish 168.548247814 1237.10163283
+released.
+5 has been resumed.
+list=[ 30 ] mq=[ 1 18 23 26 28 27 29 25 20 5 ] susq=[ 12 4 3 9 ]
+waiting ...
+controller ca 3 47963220 15987740 3 3.0
+released.
+9 has been resumed.
+list=[ 30 ] mq=[ 1 18 23 26 28 27 29 25 20 5 9 ] susq=[ 12 4 3 ]
+waiting ...
+controller ca 4 43449220 10862305 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=11
+1 has been suspended.
+list=[ 30 ] mq=[ 18 23 26 28 27 29 25 20 5 9 ] susq=[ 12 4 3 1 ]
+waiting ...
+controller ca 3 40652304 13550768 3 3.0
+released.
+1 has been resumed.
+list=[ 30 ] mq=[ 18 23 26 28 27 29 25 20 5 9 1 ] susq=[ 12 4 3 ]
+waiting ...
+controller ca 4 37969318 9492329 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=11
+18 has been suspended.
+list=[ 30 ] mq=[ 23 26 28 27 29 25 20 5 9 1 ] susq=[ 12 4 3 18 ]
+waiting ...
+finish 147.137763023 1255.25498104
+released.
+18 has been resumed.
+list=[ 30 ] mq=[ 23 26 27 29 25 20 5 9 1 18 ] susq=[ 12 4 3 ]
+waiting ...
+controller ca 3 33212359 11070786 3 3.0
+released.
+3 has been resumed.
+list=[ 30 ] mq=[ 23 26 27 29 25 20 5 9 1 18 3 ] susq=[ 12 4 ]
+waiting ...
+controller ca 4 41969165 10492291 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=11
+23 has been suspended.
+list=[ 30 ] mq=[ 26 27 29 25 20 5 9 1 18 3 ] susq=[ 12 4 23 ]
+waiting ...
+controller ca 3 34431220 11477073 3 3.0
+released.
+23 has been resumed.
+list=[ 30 ] mq=[ 26 27 29 25 20 5 9 1 18 3 23 ] susq=[ 12 4 ]
+waiting ...
+finish 180.729367018 1277.54158401
+released.
+4 has been resumed.
+list=[ 30 ] mq=[ 27 29 25 20 5 9 1 18 3 23 4 ] susq=[ 12 ]
+waiting ...
+controller ca 4 38557220 9639305 4 3.0
+cvms=4 vwnd=3 rest=1 len(mq)=11
+27 has been suspended.
+list=[ 30 ] mq=[ 29 25 20 5 9 1 18 3 23 4 ] susq=[ 12 27 ]
+waiting ...
+controller ca 3 27474275 9158091 3 3.0
+cvms=3 vwnd=2 rest=1 len(mq)=10
+29 has been suspended.
+list=[ 30 ] mq=[ 25 20 5 9 1 18 3 23 4 ] susq=[ 12 27 29 ]
+waiting ...
+controller ca 2 29292275 14646137 2 2.25
+released.
+29 has been resumed.
+list=[ 30 ] mq=[ 25 20 5 9 1 18 3 23 4 29 ] susq=[ 12 27 ]
+waiting ...
+controller ca 3 27631275 9210425 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=10
+25 has been suspended.
+list=[ 30 ] mq=[ 20 5 9 1 18 3 23 4 29 ] susq=[ 12 27 25 ]
+waiting ...
+controller ca 2 27701220 13850610 2 2.25
+released.
+25 has been resumed.
+list=[ 30 ] mq=[ 20 5 9 1 18 3 23 4 29 25 ] susq=[ 12 27 ]
+waiting ...
+controller ca 3 31231220 10410406 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=10
+20 has been suspended.
+list=[ 30 ] mq=[ 5 9 1 18 3 23 4 29 25 ] susq=[ 12 27 20 ]
+waiting ...
+controller ca 2 24966414 12483207 2 2.25
+released.
+20 has been resumed.
+list=[ 30 ] mq=[ 5 9 1 18 3 23 4 29 25 20 ] susq=[ 12 27 ]
+waiting ...
+controller ca 3 25990692 8663564 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=10
+5 has been suspended.
+list=[ 30 ] mq=[ 9 1 18 3 23 4 29 25 20 ] susq=[ 12 27 5 ]
+waiting ...
+controller ca 2 27209304 13604652 2 2.25
+released.
+5 has been resumed.
+list=[ 30 ] mq=[ 9 1 18 3 23 4 29 25 20 5 ] susq=[ 12 27 ]
+waiting ...
+controller ca 3 32000275 10666758 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=10
+9 has been suspended.
+list=[ 30 ] mq=[ 1 18 3 23 4 29 25 20 5 ] susq=[ 12 27 9 ]
+waiting ...
+controller ca 2 26394275 13197137 2 2.25
+released.
+9 has been resumed.
+list=[ 30 ] mq=[ 1 18 3 23 4 29 25 20 5 9 ] susq=[ 12 27 ]
+waiting ...
+controller ca 3 26032220 8677406 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=10
+1 has been suspended.
+list=[ 30 ] mq=[ 18 3 23 4 29 25 20 5 9 ] susq=[ 12 27 1 ]
+waiting ...
+controller ca 2 27939275 13969637 2 2.25
+released.
+1 has been resumed.
+list=[ 30 ] mq=[ 18 3 23 4 29 25 20 5 9 1 ] susq=[ 12 27 ]
+waiting ...
+controller ca 3 34000275 11333425 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=10
+18 has been suspended.
+list=[ 30 ] mq=[ 3 23 4 29 25 20 5 9 1 ] susq=[ 12 27 18 ]
+waiting ...
+controller ca 2 28666275 14333137 2 2.25
+released.
+18 has been resumed.
+list=[ 30 ] mq=[ 3 23 4 29 25 20 5 9 1 18 ] susq=[ 12 27 ]
+waiting ...
+controller ca 3 31400220 10466740 3 2.25
+cvms=3 vwnd=2 rest=1 len(mq)=10
+3 has been suspended.
+list=[ 30 ] mq=[ 23 4 29 25 20 5 9 1 18 ] susq=[ 12 27 3 ]
+waiting ...
+controller ca 2 20868220 10434110 2 2.25
+cvms=2 vwnd=1 rest=1 len(mq)=9
+23 has been suspended.
+list=[ 30 ] mq=[ 4 29 25 20 5 9 1 18 ] susq=[ 12 27 3 23 ]
+waiting ...
+controller ca 1 25708414 25708414 1 1.5
+released.
+23 has been resumed.
+list=[ 30 ] mq=[ 4 29 25 20 5 9 1 18 23 ] susq=[ 12 27 3 ]
+waiting ...
+finish 261.260818958 1375.03414798
+released.
+3 has been resumed.
+list=[ 30 ] mq=[ 4 25 20 5 9 1 18 23 3 ] susq=[ 12 27 ]
+waiting ...
+Could not remove vminfo from mq.
+finish 276.895154953 1379.35786986
+released.
+27 has been resumed.
+list=[ 30 ] mq=[ 4 25 20 5 9 1 18 23 3 27 ] susq=[ 12 ]
+controller ca 2 21907637 10953818 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=10
+4 has been suspended.
+list=[ 30 ] mq=[ 25 20 5 9 1 18 23 3 27 ] susq=[ 12 4 ]
+waiting ...
+controller ca 1 12000619 12000619 1 1.5
+released.
+4 has been resumed.
+list=[ 30 ] mq=[ 25 20 5 9 1 18 23 3 27 4 ] susq=[ 12 ]
+waiting ...
+controller ca 2 14000385 7000192 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=10
+25 has been suspended.
+list=[ 30 ] mq=[ 20 5 9 1 18 23 3 27 4 ] susq=[ 12 25 ]
+waiting ...
+controller ca 1 14000385 14000385 1 1.5
+released.
+25 has been resumed.
+list=[ 30 ] mq=[ 20 5 9 1 18 23 3 27 4 25 ] susq=[ 12 ]
+waiting ...
+controller ca 2 14000385 7000192 2 1.5
+cvms=2 vwnd=1 rest=1 len(mq)=10
+20 has been suspended.
+list=[ 30 ] mq=[ 5 9 1 18 23 3 27 4 25 ] susq=[ 12 20 ]
+waiting ...
+finish 324.683887959 1404.54377699
+released.
+20 has been resumed.
+list=[ 30 ] mq=[ 5 9 1 18 3 27 4 25 20 ] susq=[ 12 ]
+waiting ...
+controller ca 1 6214385 6214385 1 1.5
+waiting ...
+controller ca 1 441 441 1 0.75
+waiting ...
+controller ca 1 399 399 1 0.75
+waiting ...
+controller ca 1 440 440 1 0.75
+released.
+12 has been resumed.
+list=[ 30 ] mq=[ 5 9 1 18 3 27 4 25 20 12 ] susq=[ ]
+waiting ...
+controller ca 2 440 220 2 0.75
+cvms=2 vwnd=1 rest=1 len(mq)=10
+5 has been suspended.
+list=[ 30 ] mq=[ 9 1 18 3 27 4 25 20

@@ -1,0 +1,60 @@
+Log of time -p ./multiple.py 
+Fri Nov  2 08:47:28 2012
+
+1 [1, 2, 3, 4, 5, 6, 7, 8]
+2 [1, 2, 3, 4, 5, 6, 7, 8]
+3 [1, 2, 3, 4, 5, 6, 7, 8]
+4 [1, 2, 3, 4, 5, 6, 7, 8]
+5 [1, 2, 3, 4, 5, 6, 7, 8]
+6 [1, 2, 3, 4, 5, 6, 7, 8]
+7 [1, 2, 3, 4, 5, 6, 7, 8]
+8 [1, 2, 3, 4, 5, 6, 7, 8]
+
+rvms total avg pwnd vwnd totalvms
+ssh gra1 "virsh migrate --live gra1-1 qemu+ssh://grb1/system"pwnd= 1 , vwnd= 1 , pm= 0 , vm= 1 , rvms= 64 , pmstart= 0
+
+finish 9.53674316406e-07 0.684592962265
+ssh gra1 "virsh migrate --live gra1-2 qemu+ssh://grb1/system"pwnd= 
+finish 1.19209289551e-06 1.7046790123
+1 , vwnd= 1 , pm= 0 , vm= 2 , rvms= 63 , pmstart= 0
+ssh gra1 "virsh migrate --live gra1-3 qemu+ssh://grb1/system"pwnd= 
+finish 0.0 2.72327899933
+1 , vwnd= 1 , pm= 0 , vm= 3 , rvms= 62 , pmstart= 0
+ssh gra1 "virsh migrate --live gra1-4 qemu+ssh://grb1/system"
+finish 0.0 3.74205780029pwnd= 
+1 , vwnd= 1 , pm= 0 , vm= 4 , rvms= 61 , pmstart= 0
+ssh gra1 "virsh migrate --live gra1-5 qemu+ssh://grb1/system"
+finish 9.53674316406e-07 4.76066994667
+pwnd= 1 , vwnd= 1 , pm= 0 , vm= 5 , rvms= 60 , pmstart= 0
+ssh gra1 "virsh migrate --live gra1-6 qemu+ssh://grb1/system"pwnd= 1
+finish 9.53674316406e-07 5.7793469429 , vwnd= 1 , pm= 0 , vm= 
+6 , rvms= 59 , pmstart= 0
+64 413 413 1 1 1
+ssh gra1 "virsh migrate --live gra1-7 qemu+ssh://grb1/system"
+finish 0.0 6.79832100868
+pwnd= 2 , vwnd= 2 , pm= 0 , vm= 7 , rvms= 58 , pmstart= 0
+ssh gra2 "virsh migrate --live gra2-1 qemu+ssh://grb2/system"
+finish 9.53674316406e-07 7.8185608387
+pwnd= 2 , vwnd= 2 , pm= 1 , vm= 1 , rvms= 57 , pmstart= 0
+ssh gra1 "virsh migrate --live gra1-8 qemu+ssh://grb1/system"pwnd= 
+finish 1.19209289551e-06 8.83714199066
+2 , vwnd= 2 , pm= 0 , vm= 8 , rvms= 56 , pmstart= 1
+ssh gra2 "virsh migrate --live gra2-2 qemu+ssh://grb2/system"
+finish 9.53674316406e-07 9.85541892052
+pwnd= 2 , vwnd= 2 , pm= 1 , vm= 2 , rvms= 55 , pmstart= 1
+ssh gra2 "virsh migrate --live gra2-3 qemu+ssh://grb2/system"
+ pwnd= 2 , vwnd=finish 9.53674316406e-07 10.8736548424
+ 2 , pm= 1 , vm= 3 , rvms= 54 , pmstart= 1
+ssh gra2 "virsh migrate --live gra2-4 qemu+ssh://grb2/system"pwnd= 
+finish 9.53674316406e-07 11.8920309544
+2 , vwnd= 2 , pm= 1 , vm= 4 , rvms= 53 , pmstart= 1
+Traceback (most recent call last):
+  File "./multiple.py", line 134, in <module>
+    total = getBandwidth()
+  File "./multiple.py", line 116, in getBandwidth
+    line = p.readline()
+KeyboardInterrupt
+close failed in file object destructor:
+Error in sys.excepthook:
+
+Original exception was:

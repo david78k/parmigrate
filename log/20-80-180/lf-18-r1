@@ -1,0 +1,205 @@
+Log of time -p /nfs/vmanage/controller/multiple.py -s lf -v 18 
+Wed Apr 10 07:59:30 2013
+
+scheduling is lf
+vm window is 18
+('1', 8, 'gra8', 'gra8-1', 4370432)
+('2', 6, 'gra6', 'gra6-2', 3201024)
+('3', 5, 'gra5', 'gra5-3', 2185216)
+('4', 7, 'gra7', 'gra7-2', 2185216)
+('5', 7, 'gra7', 'gra7-1', 2185216)
+('6', 1, 'gra1', 'gra1-4', 2138112)
+('7', 5, 'gra5', 'gra5-1', 1097728)
+('8', 6, 'gra6', 'gra6-1', 1097728)
+('9', 1, 'gra1', 'gra1-3', 1073152)
+('10', 2, 'gra2', 'gra2-5', 1073152)
+('11', 2, 'gra2', 'gra2-6', 1073152)
+('12', 4, 'gra4', 'gra4-3', 1073152)
+('13', 4, 'gra4', 'gra4-1', 1073152)
+('14', 4, 'gra4', 'gra4-4', 1073152)
+('15', 4, 'gra4', 'gra4-2', 1073152)
+('16', 5, 'gra5', 'gra5-2', 1073152)
+('17', 1, 'gra1', 'gra1-1', 548864)
+('18', 1, 'gra1', 'gra1-2', 548864)
+('19', 2, 'gra2', 'gra2-2', 548864)
+('20', 2, 'gra2', 'gra2-1', 548864)
+('21', 2, 'gra2', 'gra2-4', 548864)
+('22', 2, 'gra2', 'gra2-3', 548864)
+('23', 3, 'gra3', 'gra3-4', 548864)
+('24', 3, 'gra3', 'gra3-6', 548864)
+('25', 3, 'gra3', 'gra3-8', 548864)
+('26', 3, 'gra3', 'gra3-3', 548864)
+('27', 3, 'gra3', 'gra3-1', 548864)
+('28', 3, 'gra3', 'gra3-5', 548864)
+('29', 3, 'gra3', 'gra3-2', 548864)
+('30', 3, 'gra3', 'gra3-7', 548864)
+ssh gra8 "virsh migrate --live gra8-1 qemu+ssh://grb8/system"
+ 1 has started.
+list=[ 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 ] susq=[ ]
+released.
+ssh gra6 "virsh migrate --live gra6-2 qemu+ssh://grb6/system"
+ 2 has started.
+list=[ 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 ] susq=[ ]
+released.
+ssh gra5 "virsh migrate --live gra5-3 qemu+ssh://grb5/system"
+ 3 has started.
+list=[ 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 ] susq=[ ]
+released.
+ssh gra7 "virsh migrate --live gra7-2 qemu+ssh://grb7/system"
+ 4 has started.
+list=[ 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 ] susq=[ ]
+released.
+5 has started.
+list=[ 6 7 8ssh gra7 "virsh migrate --live gra7-1 qemu+ssh://grb7/system"
+ 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 ] susq=[ ]
+released.
+ssh gra1 "virsh migrate --live gra1-4 qemu+ssh://grb1/system"
+ 6 has started.
+list=[ 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 ] susq=[ ]
+released.
+7 has started.
+list=[ ssh gra5 "virsh migrate --live gra5-1 qemu+ssh://grb5/system"
+8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 ] susq=[ ]
+released.
+ssh gra6 "virsh migrate --live gra6-1 qemu+ssh://grb6/system"
+ 8 has started.
+list=[ 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 ] susq=[ ]
+released.
+9 has started.
+list=[ 10 11 12 13 ssh gra1 "virsh migrate --live gra1-3 qemu+ssh://grb1/system"
+14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 ] susq=[ ]
+released.
+ssh gra2 "virsh migrate --live gra2-5 qemu+ssh://grb2/system"
+ 10 has started.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 ] susq=[ ]
+released.
+11 has started.
+list=[ 12 13ssh gra2 "virsh migrate --live gra2-6 qemu+ssh://grb2/system"
+ 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 11 ] susq=[ ]
+released.
+ssh gra4 "virsh migrate --live gra4-3 qemu+ssh://grb4/system"
+ 12 has started.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 11 12 ] susq=[ ]
+released.
+ssh gra4 "virsh migrate --live gra4-1 qemu+ssh://grb4/system"
+13 has started.
+list=[ 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 11 12 13 ] susq=[ ]
+released.
+ssh gra4 "virsh migrate --live gra4-4 qemu+ssh://grb4/system"
+ 14 has started.
+list=[ 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 ] susq=[ ]
+released.
+15 has started.
+list=[ 16ssh gra4 "virsh migrate --live gra4-2 qemu+ssh://grb4/system"
+ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 ] susq=[ ]
+released.
+ssh gra5 "virsh migrate --live gra5-2 qemu+ssh://grb5/system"
+ 16 has started.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 ] susq=[ ]
+released.
+ssh gra1 "virsh migrate --live gra1-1 qemu+ssh://grb1/system"
+17 has started.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 ] susq=[ ]
+released.
+ssh gra1 "virsh migrate --live gra1-2 qemu+ssh://grb1/system"
+ 18 has started.
+list=[ 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 ] susq=[ ]
+waiting ...
+finish 147.633353949 160.479189873
+released.
+ssh gra2 "virsh migrate --live gra2-2 qemu+ssh://grb2/system"
+19 has started.
+list=[ 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 19 ] susq=[ ]
+waiting ...
+finish 148.250944853 160.995478868
+released.
+ssh gra2 "virsh migrate --live gra2-1 qemu+ssh://grb2/system"
+ 20 has started.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 19 20 ] susq=[ ]
+waiting ...
+finish 209.546639919 221.584308863
+released.
+ssh gra2 "virsh migrate --live gra2-4 qemu+ssh://grb2/system"
+ 21 has started.
+list=[ 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 11 12 13 14 15 16 19 20 21 ] susq=[ ]
+waiting ...
+finish 210.049137831 221.985664845
+released.
+ssh gra2 "virsh migrate --live gra2-3 qemu+ssh://grb2/system"
+22 has started.
+list=[ 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 11 12 13 14 15 16 19 20 21 22 ] susq=[ ]
+waiting ...
+finish 213.513190985 226.157060862
+released.
+ssh gra3 "virsh migrate --live gra3-4 qemu+ssh://grb3/system"
+ 23 has started.
+list=[ 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 11 12 13 14 15 19 20 21 22 23 ] susq=[ ]
+waiting ...
+finish 217.429494858 229.16404891
+released.
+ssh gra3 "virsh migrate --live gra3-6 qemu+ssh://grb3/system"
+24 has started.
+list=[ 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 8 11 12 13 14 15 19 20 21 22 23 24 ] susq=[ ]
+waiting ...
+finish 230.673229933 243.013967991
+released.
+ssh gra3 "virsh migrate --live gra3-8 qemu+ssh://grb3/system"
+ 25 has started.
+list=[ 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 8 11 12 14 15 19 20 21 22 23 24 25 ] susq=[ ]
+waiting ...
+finish 232.192131042 244.330456972
+released.
+ssh gra3 "virsh migrate --live gra3-3 qemu+ssh://grb3/system"
+26 has started.
+list=[ 27 28 29 30 ] mq=[ 1 2 3 4 5 6 8 12 14 15 19 20 21 22 23 24 25 26 ] susq=[ ]
+waiting ...
+finish 234.662562847 246.498298883
+released.
+ssh gra3 "virsh migrate --live gra3-1 qemu+ssh://grb3/system"
+ 27 has started.
+list=[ 28 29 30 ] mq=[ 1 2 3 4 5 6 12 14 15 19 20 21 22 23 24 25 26 27 ] susq=[ ]
+waiting ...
+finish 236.231677055 248.774363041
+released.
+ssh gra3 "virsh migrate --live gra3-5 qemu+ssh://grb3/system"
+ 28 has started.
+list=[ 29 30 ] mq=[ 1 2 3 4 5 6 12 14 19 20 21 22 23 24 25 26 27 28 ] susq=[ ]
+waiting ...
+finish 238.004274845 250.44628191
+released.
+ssh gra3 "virsh migrate --live gra3-2 qemu+ssh://grb3/system"
+29 has started.
+list=[ 30 ] mq=[ 1 2 3 4 5 6 12 19 20 21 22 23 24 25 26 27 28 29 ] susq=[ ]
+waiting ...
+finish 118.820961952 279.300742865
+released.
+ssh gra3 "virsh migrate --live gra3-7 qemu+ssh://grb3/system"
+30 has started.
+list=[ ] mq=[ 1 2 3 4 5 6 12 20 21 22 23 24 25 26 27 28 29 30 ] susq=[ ]
+waiting ...
+finish 145.298457861 306.294473886
+released.
+migrator done.
+finish 325.374481916 337.614030838
+finish 109.048723936 338.213295937
+finish 123.710438013 349.868072987
+finish 105.286001921 351.784849882
+finish 135.451513052 357.43770504
+finish 143.806061029 365.391722918
+finish 123.100884914 371.87577486
+finish 141.113137007 385.444057941
+finish 378.480750084 389.811475992
+finish 380.395307064 391.928040028
+finish 145.010219812 395.456982851
+finish 154.647768021 397.662402868
+finish 408.058216095 419.692106009
+finish 429.125627995 440.557688951
+finish 179.094689131 458.395992994
+finish 470.703660011 481.933140993
+finish 485.594916105 496.723777056
+real 496.75
+user 0.61
+sys 0.35
+
+Wed Apr 10 08:07:47 2013
+----------------

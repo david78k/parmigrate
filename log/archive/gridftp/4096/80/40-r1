@@ -1,0 +1,10 @@
+Log of time -p ssh gra1 globus-url-copy -p 40 /root/vmstate/gra8-1.vstat sshftp://grb1/root/vmstate/gra8-1.vstat 
+Sat Mar 16 22:16:13 2013
+
+real 73.28
+user 0.00
+sys 0.00
+
+Sat Mar 16 22:17:27 2013
+----------------
+55.89519650655021834061 1.39737991266375545851 73.28

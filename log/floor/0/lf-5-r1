@@ -1,0 +1,11 @@
+Log of time -p /nfs/vmanage/controller/multiplecontroller.py -s lf -v 5 2 gr121 
+Fri Jan 11 23:48:50 2013
+
+scheduling is lf
+vm window is 5
+real 0.96
+user 0.08
+sys 0.04
+
+Fri Jan 11 23:48:51 2013
+----------------

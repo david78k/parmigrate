@@ -1,0 +1,4 @@
+print round(2.1)
+print round(2.5)
+print round(2.9)
+

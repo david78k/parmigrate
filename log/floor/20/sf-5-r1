@@ -1,0 +1,71 @@
+Log of time -p /nfs/vmanage/controller/multiplecontroller.py -s sf -v 5 
+Sat Jan 12 06:15:00 2013
+
+scheduling is sf
+vm window is 5
+ssh gra1 "virsh migrate --live gra1-2 qemu+ssh://grb1/system"
+ssh gra1 "virsh migrate --live gra1-1 qemu+ssh://grb1/system"
+ssh gra2 "virsh migrate --live gra2-1 qemu+ssh://grb2/system"
+ssh gra2 "virsh migrate --live gra2-4 qemu+ssh://grb2/system"
+ssh gra2 "virsh migrate --live gra2-2 qemu+ssh://grb2/system"
+finish 34.9073371887 51.7106511593
+ssh gra2 "virsh migrate --live gra2-3 qemu+ssh://grb2/system"
+finish 37.9545640945 54.556800127
+ssh gra3 "virsh migrate --live gra3-2 qemu+ssh://grb3/system"
+finish 44.9476058483 61.85166502
+ssh gra3 "virsh migrate --live gra3-1 qemu+ssh://grb3/system"
+finish 57.9707429409 74.6735200882
+ssh gra3 "virsh migrate --live gra3-8 qemu+ssh://grb3/system"
+finish 59.8829519749 76.8875141144
+ssh gra3 "virsh migrate --live gra3-3 qemu+ssh://grb3/system"
+finish 29.6785290241 81.3904900551
+ssh gra3 "virsh migrate --live gra3-4 qemu+ssh://grb3/system"
+finish 34.8371670246 96.6893219948
+ssh gra3 "virsh migrate --live gra3-6 qemu+ssh://grb3/system"
+finish 48.4777600765 103.035061121
+ssh gra3 "virsh migrate --live gra3-5 qemu+ssh://grb3/system"
+finish 23.5039410591 120.193790197
+ssh gra3 "virsh migrate --live gra3-7 qemu+ssh://grb3/system"
+finish 24.2652719021 127.300801039
+ssh gra1 "virsh migrate --live gra1-3 qemu+ssh://grb1/system"
+finish 50.2992300987 131.690241098
+ssh gra2 "virsh migrate --live gra2-5 qemu+ssh://grb2/system"
+finish 70.7952539921 145.469297171
+ssh gra2 "virsh migrate --live gra2-6 qemu+ssh://grb2/system"
+finish 31.9048380852 152.099150181
+ssh gra4 "virsh migrate --live gra4-4 qemu+ssh://grb4/system"
+finish 80.9524760246 157.840484142
+ssh gra4 "virsh migrate --live gra4-3 qemu+ssh://grb4/system"
+finish 65.2413198948 217.340955019
+ssh gra4 "virsh migrate --live gra4-1 qemu+ssh://grb4/system"
+finish 87.3314988613 219.022176981
+ssh gra4 "virsh migrate --live gra4-2 qemu+ssh://grb4/system"
+finish 88.7582759857 234.228084087
+ssh gra5 "virsh migrate --live gra5-2 qemu+ssh://grb5/system"
+finish 85.3294379711 243.170428991
+ssh gra5 "virsh migrate --live gra5-1 qemu+ssh://grb5/system"
+finish 116.159710884 243.460972071
+ssh gra6 "virsh migrate --live gra6-1 qemu+ssh://grb6/system"
+finish 48.9718291759 267.994443178
+ssh gra1 "virsh migrate --live gra1-4 qemu+ssh://grb1/system"
+finish 68.4250330925 285.766498089
+ssh gra5 "virsh migrate --live gra5-3 qemu+ssh://grb5/system"
+finish 88.7545750141 322.983152151
+ssh gra7 "virsh migrate --live gra7-1 qemu+ssh://grb7/system"
+finish 84.9598269463 328.130784988
+ssh gra7 "virsh migrate --live gra7-2 qemu+ssh://grb7/system"
+finish 95.3352611065 338.796675205
+ssh gra6 "virsh migrate --live gra6-2 qemu+ssh://grb6/system"
+finish 104.713321924 390.480318069
+ssh gra8 "virsh migrate --live gra8-1 qemu+ssh://grb8/system"
+finish 151.019752979 419.014691114
+finish 151.905977964 480.037234068
+finish 192.284348965 515.268027067
+finish 234.720681906 573.517877102
+finish 202.242259026 592.723123074
+real 592.75
+user 0.54
+sys 0.34
+
+Sat Jan 12 06:24:52 2013
+----------------

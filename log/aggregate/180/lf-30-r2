@@ -1,0 +1,71 @@
+Log of time -p /nfs/vmanage/controller/multiplecontroller.py -s lf -v 30 
+Sun Jan 13 07:06:18 2013
+
+scheduling is lf
+vm window is 30
+ssh grb8 "virsh migrate --live gra8-1 qemu+ssh://gra8/system"
+ssh grb6 "virsh migrate --live gra6-2 qemu+ssh://gra6/system"
+ssh grb5 "virsh migrate --live gra5-3 qemu+ssh://gra5/system"
+ssh grb7 "virsh migrate --live gra7-2 qemu+ssh://gra7/system"
+ssh grb7 "virsh migrate --live gra7-1 qemu+ssh://gra7/system"
+ssh grb1 "virsh migrate --live gra1-4 qemu+ssh://gra1/system"
+ssh grb5 "virsh migrate --live gra5-1 qemu+ssh://gra5/system"
+ssh grb6 "virsh migrate --live gra6-1 qemu+ssh://gra6/system"
+ssh grb1 "virsh migrate --live gra1-3 qemu+ssh://gra1/system"
+ssh grb2 "virsh migrate --live gra2-5 qemu+ssh://gra2/system"
+ssh grb2 "virsh migrate --live gra2-6 qemu+ssh://gra2/system"
+ssh grb4 "virsh migrate --live gra4-3 qemu+ssh://gra4/system"
+ssh grb4 "virsh migrate --live gra4-2 qemu+ssh://gra4/system"
+ssh grb4 "virsh migrate --live gra4-1 qemu+ssh://gra4/system"
+ssh grb4 "virsh migrate --live gra4-4 qemu+ssh://gra4/system"
+ssh grb5 "virsh migrate --live gra5-2 qemu+ssh://gra5/system"
+ssh grb1 "virsh migrate --live gra1-1 qemu+ssh://gra1/system"
+ssh grb1 "virsh migrate --live gra1-2 qemu+ssh://gra1/system"
+ssh grb2 "virsh migrate --live gra2-2 qemu+ssh://gra2/system"
+ssh grb2 "virsh migrate --live gra2-4 qemu+ssh://gra2/system"
+ssh grb2 "virsh migrate --live gra2-3 qemu+ssh://gra2/system"
+ssh grb2 "virsh migrate --live gra2-1 qemu+ssh://gra2/system"
+ssh grb3 "virsh migrate --live gra3-8 qemu+ssh://gra3/system"
+ssh grb3 "virsh migrate --live gra3-5 qemu+ssh://gra3/system"
+ssh grb3 "virsh migrate --live gra3-7 qemu+ssh://gra3/system"
+ssh grb3 "virsh migrate --live gra3-6 qemu+ssh://gra3/system"
+ssh grb3 "virsh migrate --live gra3-3 qemu+ssh://gra3/system"
+ssh grb3 "virsh migrate --live gra3-1 qemu+ssh://gra3/system"
+ssh grb3 "virsh migrate --live gra3-2 qemu+ssh://gra3/system"
+ssh grb3 "virsh migrate --live gra3-4 qemu+ssh://gra3/system"
+finish 172.564647913 201.959826946
+finish 202.502028942 232.501663923
+finish 215.666810989 245.565788031
+finish 219.422231913 248.615526915
+finish 242.788017035 272.585692883
+finish 243.809900045 273.506999969
+finish 248.884139776 277.77556181
+finish 249.601709843 279.097560883
+finish 251.343044043 281.443357944
+finish 255.845074892 284.937749863
+finish 257.841148138 286.833209038
+finish 260.320162058 289.916612864
+finish 267.247099161 297.448014021
+finish 316.854871035 346.14942503
+finish 347.028820992 375.819571972
+finish 361.075726032 389.161146879
+finish 366.350600958 394.737826824
+finish 372.752270937 401.038960934
+finish 382.516757011 411.206851006
+finish 387.910340071 416.096446991
+finish 387.640093088 416.12834096
+finish 389.048530102 417.63736701
+finish 398.444561005 426.428745031
+finish 402.602184057 430.485843897
+finish 496.610499144 524.192260981
+finish 503.742908001 531.525938988
+finish 513.00650692 540.487401962
+finish 543.826472044 571.508854866
+finish 666.381905079 693.761550903
+finish 708.201689005 735.480830908
+real 735.54
+user 0.56
+sys 0.45
+
+Sun Jan 13 07:18:34 2013
+----------------

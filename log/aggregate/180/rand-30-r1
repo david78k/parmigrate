@@ -1,0 +1,71 @@
+Log of time -p /nfs/vmanage/controller/multiplecontroller.py -s rand -v 30 
+Sun Jan 13 12:42:16 2013
+
+scheduling is rand
+vm window is 30
+ssh gra4 "virsh migrate --live gra4-3 qemu+ssh://grb4/system"
+ssh gra3 "virsh migrate --live gra3-1 qemu+ssh://grb3/system"
+ssh gra1 "virsh migrate --live gra1-3 qemu+ssh://grb1/system"
+ssh gra1 "virsh migrate --live gra1-4 qemu+ssh://grb1/system"
+ssh gra2 "virsh migrate --live gra2-4 qemu+ssh://grb2/system"
+ssh gra8 "virsh migrate --live gra8-1 qemu+ssh://grb8/system"
+ssh gra2 "virsh migrate --live gra2-6 qemu+ssh://grb2/system"
+ssh gra3 "virsh migrate --live gra3-2 qemu+ssh://grb3/system"
+ssh gra3 "virsh migrate --live gra3-8 qemu+ssh://grb3/system"
+ssh gra1 "virsh migrate --live gra1-1 qemu+ssh://grb1/system"
+ssh gra5 "virsh migrate --live gra5-1 qemu+ssh://grb5/system"
+ssh gra4 "virsh migrate --live gra4-1 qemu+ssh://grb4/system"
+ssh gra7 "virsh migrate --live gra7-2 qemu+ssh://grb7/system"
+ssh gra2 "virsh migrate --live gra2-5 qemu+ssh://grb2/system"
+ssh gra2 "virsh migrate --live gra2-1 qemu+ssh://grb2/system"
+ssh gra2 "virsh migrate --live gra2-3 qemu+ssh://grb2/system"
+ssh gra3 "virsh migrate --live gra3-7 qemu+ssh://grb3/system"
+ssh gra1 "virsh migrate --live gra1-2 qemu+ssh://grb1/system"
+ssh gra5 "virsh migrate --live gra5-2 qemu+ssh://grb5/system"
+ssh gra3 "virsh migrate --live gra3-3 qemu+ssh://grb3/system"
+ssh gra5 "virsh migrate --live gra5-3 qemu+ssh://grb5/system"
+ssh gra2 "virsh migrate --live gra2-2 qemu+ssh://grb2/system"
+ssh gra6 "virsh migrate --live gra6-1 qemu+ssh://grb6/system"
+ssh gra6 "virsh migrate --live gra6-2 qemu+ssh://grb6/system"
+ssh gra7 "virsh migrate --live gra7-1 qemu+ssh://grb7/system"
+ssh gra3 "virsh migrate --live gra3-6 qemu+ssh://grb3/system"
+ssh gra3 "virsh migrate --live gra3-4 qemu+ssh://grb3/system"
+ssh gra3 "virsh migrate --live gra3-5 qemu+ssh://grb3/system"
+ssh gra4 "virsh migrate --live gra4-2 qemu+ssh://grb4/system"
+ssh gra4 "virsh migrate --live gra4-4 qemu+ssh://grb4/system"
+finish 190.475916862 198.135099888
+finish 225.694612026 233.152578115
+finish 229.324302197 236.278628111
+finish 240.113918066 248.881122112
+finish 243.305210114 251.971846104
+finish 246.450088024 253.303812027
+finish 252.191191196 258.944013119
+finish 260.519535065 268.682456017
+finish 265.090988874 272.649524927
+finish 268.285806894 274.434211016
+finish 267.351797104 275.917792082
+finish 274.378539801 280.829608917
+finish 276.04449296 283.804239035
+finish 287.44888401 295.410604
+finish 317.466215134 324.521181107
+finish 362.349031925 371.317363024
+finish 364.364814043 371.520327091
+finish 375.983654022 384.247184992
+finish 379.874675989 385.922548056
+finish 380.972143173 388.329472065
+finish 386.19760704 394.058638096
+finish 395.026808977 403.894573927
+finish 416.200419903 422.852663994
+finish 421.502140999 427.751682043
+finish 504.302502871 511.55921793
+finish 512.275097847 518.625526905
+finish 554.157035828 562.219358921
+finish 566.449923038 574.915239096
+finish 621.80708003 630.171200991
+finish 718.000396013 724.552026987
+real 724.58
+user 0.56
+sys 0.40
+
+Sun Jan 13 12:54:20 2013
+----------------

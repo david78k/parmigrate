@@ -1,0 +1,213 @@
+Log of time -p python multiplemigrator.py 
+Wed Oct 31 08:52:12 2012
+
+1 [1, 2, 3, 4, 5, 6, 7, 8]
+2 [1, 2, 3, 4, 5, 6, 7, 8]
+3 [1, 2, 3, 4, 5, 6, 7, 8]
+4 [1, 2, 3, 4, 5, 6, 7, 8]
+5 [1, 2, 3, 4, 5, 6, 7, 8]
+6 [1, 2, 3, 4, 5, 6, 7, 8]
+7 [1, 2, 3, 4, 5, 6, 7, 8]
+8 [1, 2, 3, 4, 5, 6, 7, 8]
+
+ssh grb1 "virsh migrate --live gra1-1 qemu+ssh://gra1/system"
+pm = 0 , vm = 1 , rvms = 64 , pmstart = 0
+ssh grb2 "virsh migrate --live gra2-1 qemu+ssh://gra2/system"
+pm = 1 , vm = 1 , rvms = 63 , pmstart = 0
+ssh grb3 "virsh migrate --live gra3-1 qemu+ssh://gra3/system"
+pm = 2 , vm = 1 , rvms = 62 , pmstart = 0
+ssh grb4 "virsh migrate --live gra4-1 qemu+ssh://gra4/system"pm = 
+3 , vm = 1 , rvms = 61 , pmstart = 0
+ssh grb5 "virsh migrate --live gra5-1 qemu+ssh://gra5/system"
+pm = 4 , vm = 1 , rvms = 60 , pmstart = 0
+ssh grb6 "virsh migrate --live gra6-1 qemu+ssh://gra6/system"pm = 
+5 , vm = 1 , rvms = 59 , pmstart = 0
+ssh grb7 "virsh migrate --live gra7-1 qemu+ssh://gra7/system"pm = 
+6 , vm = 1 , rvms = 58 , pmstart = 0
+ssh grb8 "virsh migrate --live gra8-1 qemu+ssh://gra8/system"pm = 
+7 , vm = 1 , rvms = 57 , pmstart = 0
+ssh grb1 "virsh migrate --live gra1-2 qemu+ssh://gra1/system"pm = 0
+ , vm = 2 , rvms = 56 , pmstart = 0
+ssh grb2 "virsh migrate --live gra2-2 qemu+ssh://gra2/system"pm = 1
+ , vm = 2 , rvms = 55 , pmstart = 0
+ssh grb3 "virsh migrate --live gra3-2 qemu+ssh://gra3/system"pm = 
+2 , vm = 2 , rvms = 54 , pmstart = 0
+ssh grb4 "virsh migrate --live gra4-2 qemu+ssh://gra4/system"pm = 
+3 , vm = 2 , rvms = 53 , pmstart = 0
+ssh grb5 "virsh migrate --live gra5-2 qemu+ssh://gra5/system"pm = 
+4 , vm = 2 , rvms = 52 , pmstart = 0
+pm =ssh grb6 "virsh migrate --live gra6-2 qemu+ssh://gra6/system"
+ 5 , vm = 2 , rvms = 51 , pmstart = 0
+ssh grb7 "virsh migrate --live gra7-2 qemu+ssh://gra7/system"pm = 6
+ , vm = 2 , rvms = 50 , pmstart = 0
+ssh grb8 "virsh migrate --live gra8-2 qemu+ssh://gra8/system"pm = 
+7 , vm = 2 , rvms = 49 , pmstart = 0
+finish 57.2168791294 57.2515511513
+ssh grb1 "virsh migrate --live gra1-3 qemu+ssh://gra1/system"pm = 
+0 , vm = 3 , rvms = 48 , pmstart = 0
+finish 64.971681118 65.1740550995
+ssh grb2 "virsh migrate --live gra2-3 qemu+ssh://gra2/system"pm = 
+1 , vm = 3 , rvms = 47 , pmstart = 0
+finish 66.3937962055 66.4687831402
+ssh grb3 "virsh migrate --live gra3-3 qemu+ssh://gra3/system"
+pm = 2 , vm = 3 , rvms = 46 , pmstart = 0
+finish 70.7295818329 70.782763958
+ssh grb4 "virsh migrate --live gra4-3 qemu+ssh://gra4/system"pm = 
+3 , vm = 3 , rvms = 45 , pmstart = 0
+finish 74.7019000053 74.9493730068
+ssh grb5 "virsh migrate --live gra5-3 qemu+ssh://gra5/system"pm = 
+4 , vm = 3 , rvms = 44 , pmstart = 0
+finish 79.2471780777 79.4721331596
+ssh grb6 "virsh migrate --live gra6-3 qemu+ssh://gra6/system"
+pm = 5 , vm = 3 , rvms = 43 , pmstart = 0
+finish 80.889015913 80.9058120251
+ssh grb7 "virsh migrate --live gra7-3 qemu+ssh://gra7/system"pm = 
+6 , vm = 3 , rvms = 42 , pmstart = 0
+finish 81.914675951 82.0291910172
+ssh grb8 "virsh migrate --live gra8-3 qemu+ssh://gra8/system"pm = 7
+ , vm = 3 , rvms = 41 , pmstart = 0
+finish 82.0668640137 82.1614480019
+ssh grb1 "virsh migrate --live gra1-4 qemu+ssh://gra1/system"
+pm = 0 , vm = 4 , rvms = 40 , pmstart = 0
+finish 82.7078859806 83.0051980019
+ssh grb2 "virsh migrate --live gra2-4 qemu+ssh://gra2/system"pm = 
+1 , vm = 4 , rvms = 39 , pmstart = 0
+finish 83.6367621422 83.8140420914
+ssh grb3 "virsh migrate --live gra3-4 qemu+ssh://gra3/system"
+pm = 2 , vm = 4 , rvms = 38 , pmstart = 0
+finish 83.9133131504 84.2618811131
+ssh grb4 "virsh migrate --live gra4-4 qemu+ssh://gra4/system"pm = 
+3 , vm = 4 , rvms = 37 , pmstart = 0
+finish 88.2917311192 88.6126160622
+ssh grb5 "virsh migrate --live gra5-4 qemu+ssh://gra5/system"
+pm = 4 , vm = 4 , rvms = 36 , pmstart = 0
+finish 93.3619501591 93.4973781109
+ssh grb6 "virsh migrate --live gra6-4 qemu+ssh://gra6/system"
+pm = 5 , vm = 4 , rvms = 35 , pmstart = 0
+finish 94.434623003 94.5904090405
+ssh grb7 "virsh migrate --live gra7-4 qemu+ssh://gra7/system"
+pm = 6 , vm = 4 , rvms = 34 , pmstart = 0
+finish 95.105561018 95.3758940697
+ssh grb8 "virsh migrate --live gra8-4 qemu+ssh://gra8/system"
+pm = 7 , vm = 4 , rvms = 33 , pmstart = 0
+finish 37.7512099743 102.986045122
+ssh grb1 "virsh migrate --live gra1-5 qemu+ssh://gra1/system"
+pm = 0 , vm = 5 , rvms = 32 , pmstart = 0
+finish 34.4255919456 117.498837948
+ssh grb2 "virsh migrate --live gra2-5 qemu+ssh://gra2/system"pm = 
+1 , vm = 5 , rvms = 31 , pmstart = 0
+finish 82.2674031258 139.553866148
+ssh grb3 "virsh migrate --live gra3-5 qemu+ssh://gra3/system"pm = 
+2 , vm = 5 , rvms = 30 , pmstart = 0
+finish 30.2927820683 147.838765144
+ssh grb4 "virsh migrate --live gra4-5 qemu+ssh://gra4/system"pm = 
+3 , vm = 5 , rvms = 29 , pmstart = 0
+finish 80.1604878902 151.050662994
+ssh grb5 "virsh migrate --live gra5-5 qemu+ssh://gra5/system"pm = 
+4 , vm = 5 , rvms = 28 , pmstart = 0
+finish 93.1404359341 159.619024038
+ssh grb6 "virsh migrate --live gra6-5 qemu+ssh://gra6/system"
+pm = 5 , vm = 5 , rvms = 27 , pmstart = 0
+finish 84.8456990719 159.855426073
+ssh grb7 "virsh migrate --live gra7-5 qemu+ssh://gra7/system"pm = 6
+ , vm = 5 , rvms = 26 , pmstart = 0
+finish 82.3838469982 163.341099024
+ssh grb8 "virsh migrate --live gra8-5 qemu+ssh://gra8/system"
+pm = 7 , vm = 5 , rvms = 25 , pmstart = 0
+finish 80.3074069023 164.623522043
+pm = 0ssh grb1 "virsh migrate --live gra1-6 qemu+ssh://gra1/system"
+ , vm = 6 , rvms = 24 , pmstart = 0
+finish 84.4201068878 166.626992941
+ssh grb2 "virsh migrate --live gra2-6 qemu+ssh://gra2/system"pm = 1
+ , vm = 6 , rvms = 23 , pmstart = 0
+finish 87.6127169132 167.101607084
+ssh grb3 "virsh migrate --live gra3-6 qemu+ssh://gra3/system"pm = 
+2 , vm = 6 , rvms = 22 , pmstart = 0
+finish 87.9486539364 170.012310982
+ssh grb4 "virsh migrate --live gra4-6 qemu+ssh://gra4/system"pm = 
+3 , vm = 6 , rvms = 21 , pmstart = 0
+finish 87.3327491283 171.151858091
+ssh grb5 "virsh migrate --live gra5-6 qemu+ssh://gra5/system"pm = 4
+ , vm = 6 , rvms = 20 , pmstart = 0
+finish 84.4209060669 173.043148041
+ssh grb6 "virsh migrate --live gra6-6 qemu+ssh://gra6/system"pm = 5
+ , vm = 6 , rvms = 19 , pmstart = 0
+finish 71.152007103 174.209994078
+ssh grb7 "virsh migrate --live gra7-6 qemu+ssh://gra7/system"
+ pm = 6 , vm = 6 , rvms = 18 , pmstart = 0
+finish 84.1788449287 177.763648033
+ssh grb8 "virsh migrate --live gra8-6 qemu+ssh://gra8/system"pm = 
+7 , vm = 6 , rvms = 17 , pmstart = 0
+finish 84.5007259846 179.888332129
+ssh grb1 "virsh migrate --live gra1-7 qemu+ssh://gra1/system"
+pm = 0 , vm = 7 , rvms = 16 , pmstart = 0
+finish 87.5115001202 182.174668074
+ssh grb2 "virsh migrate --live gra2-7 qemu+ssh://gra2/system"
+pm = 1 , vm = 7 , rvms = 15 , pmstart = 0
+finish 36.1064519882 202.763947964
+ssh grb3 "virsh migrate --live gra3-7 qemu+ssh://gra3/system"pm = 
+2 , vm = 7 , rvms = 14 , pmstart = 0
+finish 36.3565809727 218.585107088
+ssh grb4 "virsh migrate --live gra4-7 qemu+ssh://gra4/system"pm = 
+3 , vm = 7 , rvms = 13 , pmstart = 0
+finish 80.2469730377 219.822324038
+ssh grb5 "virsh migrate --live gra5-7 qemu+ssh://gra5/system"pm = 
+4 , vm = 7 , rvms = 12 , pmstart = 0
+finish 82.3355350494 230.282605171
+ssh grb6 "virsh migrate --live gra6-7 qemu+ssh://gra6/system"pm = 
+5 , vm = 7 , rvms = 11 , pmstart = 0
+finish 85.9869520664 237.130906105
+ssh grb7 "virsh migrate --live gra7-7 qemu+ssh://gra7/system"
+pm = 6 , vm = 7 , rvms = 10 , pmstart = 0
+finish 81.4446029663 241.080610991
+ssh grb8 "virsh migrate --live gra8-7 qemu+ssh://gra8/system"pm = 7
+ , vm = 7 , rvms = 9 , pmstart = 0
+finish 82.4481201172 242.3390131
+ssh grb1 "virsh migrate --live gra1-8 qemu+ssh://gra1/system"
+pm = 0 , vm = 8 , rvms = 8 , pmstart = 1
+finish 85.1725199223 248.613044024
+ssh grb2 "virsh migrate --live gra2-8 qemu+ssh://gra2/system"pm = 
+1 , vm = 8 , rvms = 7 , pmstart = 2
+finish 83.5812728405 250.728796959
+ssh grb3 "virsh migrate --live gra3-8 qemu+ssh://gra3/system"
+pm = 2 , vm = 8 , rvms = 6 , pmstart = 3
+finish 81.2514748573 252.436120987
+ssh grb4 "virsh migrate --live gra4-8 qemu+ssh://gra4/system"
+pm = 3 , vm = 8 , rvms = 5 , pmstart = 4
+finish 82.5344800949 252.641209126
+ssh grb5 "virsh migrate --live gra5-8 qemu+ssh://gra5/system"pm = 
+4 , vm = 8 , rvms = 4 , pmstart = 5
+finish 89.325758934 253.962774038
+ssh grb6 "virsh migrate --live gra6-8 qemu+ssh://gra6/system"pm = 5
+ , vm = 8 , rvms = 3 , pmstart = 6
+finish 80.9300618172 254.017411947
+ssh grb7 "virsh migrate --live gra7-8 qemu+ssh://gra7/system"pm = 6
+ , vm = 8 , rvms = 2 , pmstart = 7
+finish 82.6654081345 256.949854136
+pm = 7ssh grb8 "virsh migrate --live gra8-8 qemu+ssh://gra8/system"
+ , vm = 8 , rvms = 1 , pmstart = 8
+
+deque([[], [], [], [], [], [], [], []])
+16
+finish 80.6080830097 260.579646111
+finish 83.7260251045 261.560464144
+finish 28.2485249043 276.971832991
+finish 81.6692280769 284.507307053
+finish 74.7072958946 293.326256037
+finish 75.8499941826 295.782389164
+finish 70.4962418079 300.798280954
+finish 62.5714120865 303.72934103
+finish 69.7597570419 306.901879072
+finish 66.7204859257 309.074599028
+finish 57.2162890434 309.878026009
+finish 57.6667048931 310.191437006
+finish 53.8440721035 310.800528049
+finish 60.1733829975 310.915740967
+finish 56.9605848789 310.936177969
+finish 56.8733458519 310.985826969
+real 311.04
+user 10.03
+sys 36.14
+
+Wed Oct 31 08:57:23 2012
+----------------
