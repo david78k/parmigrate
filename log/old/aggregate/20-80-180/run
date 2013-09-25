@@ -1,0 +1,5 @@
+octave genplot.m
+
+git add .
+git commit -a -m genplot
+git push
