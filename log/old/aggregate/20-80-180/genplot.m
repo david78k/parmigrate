@@ -15,8 +15,8 @@ figure
 %gplot rand (100,1) with linespoints
 x = -10:0.1:10;
 %plot (x, sin (x));
-plot(A(:,:))
-%plot(A(:,1:2))
+%plot(A(:,:))
+plot(A(:,1:2))
 %plot(vwnds)
 %plot(RTTs, Ns)
 %xlabel('time')
