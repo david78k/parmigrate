@@ -29,7 +29,7 @@ saveas (1, strcat(output, ".png"));
 %saveas (1, "power-law.eps");
 %saveas (1, "power-law.emf");
 
-output = strcat(prefix, ".bw")
-figure
-plot(A(:,2:3))
-saveas (1, strcat(output, ".png"));
+%output = strcat(prefix, ".bw")
+%figure
+%plot(A(:,2:3))
+%saveas (1, strcat(output, ".png"));
