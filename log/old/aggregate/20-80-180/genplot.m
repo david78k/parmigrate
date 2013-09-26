@@ -4,7 +4,8 @@ data = "test.mat"
 %A = load (data) 
 
 prefix = "lf-0-r1"
-data = strcat(prefix, ".vwnd");
+data = strcat(prefix, ".controller");
+output = strcat(prefix, ".vwnd");
 
 A = load (data);
 %A = load ('lf-0-r1.vwnd', 'ascii')
@@ -16,7 +17,7 @@ figure
 x = -10:0.1:10;
 %plot (x, sin (x));
 %plot(A(:,:))
-plot(A(:,1:2))
+plot(A(:,1:5))
 %plot(vwnds)
 %plot(RTTs, Ns)
 %xlabel('time')
@@ -24,9 +25,11 @@ plot(A(:,1:2))
 
 %image = "lf-0-r1";
 %print -deps $image.eps
-saveas (1, strcat(prefix, ".png"));
+saveas (1, strcat(output, ".png"));
 %saveas (1, "power-law.eps");
 %saveas (1, "power-law.emf");
 
-%data = strcat(prefix, ".cvms");
-%A = load (data);
+output = strcat(prefix, ".bw")
+figure
+plot(A(:,2:3))
+saveas (1, strcat(output, ".png"));
