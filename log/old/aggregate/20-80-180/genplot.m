@@ -32,7 +32,9 @@ saveas (1, strcat(output, ".emf"));
 
 figure;
 output = strcat(prefix, ".bw");
-plot(A(:,2:3)/1000000, '--');
+x = 1:1:length(A);
+plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '--');
+%plot(A(:,2:3)/1000000);
 xlabel('ITERATION');
 ylabel('THROUGHPUT (MB/s)');
 legend('AGGREGATE', 'PER VM');
