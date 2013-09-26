@@ -12,7 +12,7 @@ A = load (data);
 
 %vwnds = A(:,1)
 
-figure
+figure;
 %gplot rand (100,1) with linespoints
 x = -10:0.1:10;
 %plot (x, sin (x));
@@ -20,8 +20,8 @@ x = -10:0.1:10;
 plot(A(:,[1, 5]));
 %plot(A(:,1:5))
 %plot(RTTs, Ns)
-xlabel('ITERATION')
-ylabel('VM WINDOW')
+xlabel('ITERATION');
+ylabel('VM WINDOW');
 
 %image = "lf-0-r1";
 %print -deps $image.eps
@@ -29,9 +29,9 @@ saveas (1, strcat(output, ".png"));
 %saveas (1, "power-law.eps");
 %saveas (1, "power-law.emf");
 
-figure
-output = strcat(prefix, ".bw")
-plot(A(:,2:3))
+figure;
+output = strcat(prefix, ".bw");
+plot(A(:,2:3));
+xlabel('ITERATION');
+ylabel('VM WINDOW');
 saveas (1, strcat(output, ".png"));
-xlabel('ITERATION')
-ylabel('VM WINDOW')
