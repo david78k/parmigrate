@@ -20,8 +20,8 @@ x = -10:0.1:10;
 plot(A(:,[1, 5]))
 %plot(A(:,1:5))
 %plot(RTTs, Ns)
-%xlabel('time')
-%ylabel('N')
+xlabel('ITERATION')
+ylabel('VM WINDOW')
 
 %image = "lf-0-r1";
 %print -deps $image.eps
