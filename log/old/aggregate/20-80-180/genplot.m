@@ -31,7 +31,7 @@ saveas (1, strcat(output, ".png"));
 
 figure;
 output = strcat(prefix, ".bw");
-plot(A(:,2:3));
-xlabel('ITERATION');
+plot(A(:,2:3)/1000000);
+xlabel('THROUGHPUT (MB/s)');
 ylabel('VM WINDOW');
 saveas (1, strcat(output, ".png"));
