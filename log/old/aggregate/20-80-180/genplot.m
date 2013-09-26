@@ -17,8 +17,8 @@ figure
 x = -10:0.1:10;
 %plot (x, sin (x));
 %plot(A(:,:))
-plot(A(:,1))
-%plot(A(:,1:5))
+%plot(A(:,1))
+plot(A(:,1:5))
 %plot(RTTs, Ns)
 %xlabel('time')
 %ylabel('N')
