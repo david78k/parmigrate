@@ -35,7 +35,8 @@ output = strcat(prefix, ".bw");
 plot(A(:,2:3)/1000000);
 xlabel('ITERATION');
 ylabel('THROUGHPUT (MB/s)');
+legend('TOTAL', 'INDIVIDUAL');
+
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
 saveas (1, strcat(output, ".emf"));
-legend('TOTAL', 'INDIVIDUAL');
