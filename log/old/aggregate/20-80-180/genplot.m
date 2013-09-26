@@ -22,6 +22,7 @@ plot(A(:,[1, 5]));
 %plot(RTTs, Ns)
 xlabel('ITERATION');
 ylabel('VM WINDOW');
+legend('VM WINDOW', 'THRESHOLD');
 
 %image = "lf-0-r1";
 %print -deps $image.eps
@@ -35,3 +36,4 @@ plot(A(:,2:3)/1000000);
 xlabel('ITERATION');
 ylabel('THROUGHPUT (MB/s)');
 saveas (1, strcat(output, ".png"));
+legend('TOTAL', 'INDIVIDUAL');
