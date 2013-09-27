@@ -1,0 +1,400 @@
+Log of time -p /nfs/parmigrate/multiple.py -s lf -v 0 
+Fri Sep 27 10:11:47 2013
+
+scheduling is lf
+vm window is 0
+('1', 8, 'gra8', 'gra8-1', 4370432)
+('2', 6, 'gra6', 'gra6-2', 3201024)
+('3', 5, 'gra5', 'gra5-3', 2185216)
+('4', 7, 'gra7', 'gra7-1', 2185216)
+('5', 7, 'gra7', 'gra7-2', 2185216)
+('6', 1, 'gra1', 'gra1-4', 2138112)
+('7', 5, 'gra5', 'gra5-1', 1097728)
+('8', 6, 'gra6', 'gra6-1', 1097728)
+('9', 1, 'gra1', 'gra1-3', 1073152)
+('10', 2, 'gra2', 'gra2-5', 1073152)
+('11', 2, 'gra2', 'gra2-6', 1073152)
+('12', 4, 'gra4', 'gra4-1', 1073152)
+('13', 4, 'gra4', 'gra4-4', 1073152)
+('14', 4, 'gra4', 'gra4-2', 1073152)
+('15', 4, 'gra4', 'gra4-3', 1073152)
+('16', 5, 'gra5', 'gra5-2', 1073152)
+('17', 1, 'gra1', 'gra1-1', 548864)
+('18', 1, 'gra1', 'gra1-2', 548864)
+('19', 2, 'gra2', 'gra2-3', 548864)
+('20', 2, 'gra2', 'gra2-2', 548864)
+('21', 2, 'gra2', 'gra2-4', 548864)
+('22', 2, 'gra2', 'gra2-1', 548864)
+('23', 3, 'gra3', 'gra3-4', 548864)
+('24', 3, 'gra3', 'gra3-7', 548864)
+('25', 3, 'gra3', 'gra3-2', 548864)
+('26', 3, 'gra3', 'gra3-5', 548864)
+('27', 3, 'gra3', 'gra3-3', 548864)
+('28', 3, 'gra3', 'gra3-6', 548864)
+('29', 3, 'gra3', 'gra3-1', 548864)
+('30', 3, 'gra3', 'gra3-8', 548864)
+phase vwnd total avg totalvms threshold
+ssh gra8 "virsh migrate --live gra8-1 qemu+ssh://grb8/system"1 has started.
+
+list=[ 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 ] susq=[ ]
+waiting ...
+controller ss 1 48000223 48000223 1 8
+released.
+ssh gra6 "virsh migrate --live gra6-2 qemu+ssh://grb6/system"2 has started.
+list=[ 3 4 
+5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 ] susq=[ ]
+waiting ...
+controller ss 2 110000168 55000084 2 8
+released.
+3 has started.ssh gra5 "virsh migrate --live gra5-3 qemu+ssh://grb5/system"
+
+list=[ 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 ] susq=[ ]
+released.
+ssh gra7 "virsh migrate --live gra7-1 qemu+ssh://grb7/system"
+ 4 has started.
+list=[ 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 ] susq=[ ]
+waiting ...
+controller ss 4 117006249 29251562 4 8
+released.
+ssh gra7 "virsh migrate --live gra7-2 qemu+ssh://grb7/system"5 has started.
+
+list=[ 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 ] susq=[ ]
+released.
+ssh gra1 "virsh migrate --live gra1-4 qemu+ssh://grb1/system"
+ 6 has started.
+list=[ 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 ] susq=[ ]
+released.
+ssh gra5 "virsh migrate --live gra5-1 qemu+ssh://grb5/system"
+7 has started.
+list=[ 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 ] susq=[ ]
+released.
+ssh gra6 "virsh migrate --live gra6-1 qemu+ssh://grb6/system"
+ 8 has started.
+list=[ 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 ] susq=[ ]
+waiting ...
+controller ss 8 119000084 14875010 8 8
+released.
+ssh gra1 "virsh migrate --live gra1-3 qemu+ssh://grb1/system"9 has started.
+list=[ 10 11 12 
+13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 ] susq=[ ]
+waiting ...
+controller ca 9 119000084 13222231 9 8
+released.
+ssh gra2 "virsh migrate --live gra2-5 qemu+ssh://grb2/system"10 has started.
+list=[ 11 12
+ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 5 6 7 8 9 10 ] susq=[ ]
+waiting ...
+controller ca 10 118455192 11845519 10 8
+cvms=10 rvwnd=8.0 rest=2 len(mq)=10
+1 has been suspended.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 2 3 4 5 6 7 8 9 10 ] susq=[ 1 ]
+2 has been suspended.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 4 5 6 7 8 9 10 ] susq=[ 1 2 ]
+waiting ...
+controller ca 7.5 118000056 15733340.8 7.5 7.5
+cvms=8 rvwnd=6.0 rest=2 len(mq)=8
+3 has been suspended.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 5 6 7 8 9 10 ] susq=[ 1 2 3 ]
+4 has been suspended.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 6 7 8 9 10 ] susq=[ 1 2 3 4 ]
+waiting ...
+controller ca 5.625 119000056 21155565.5111 5.625 5.625
+released.
+4 has been resumed.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 6 7 8 9 10 4 ] susq=[ 1 2 3 ]
+waiting ...
+controller ca 6.625 117869056 17791555.6226 6.625 5.625
+cvms=7 rvwnd=5.0 rest=2 len(mq)=7
+5 has been suspended.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 6 7 8 9 10 4 ] susq=[ 1 2 3 5 ]
+6 has been suspended.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 7 8 9 10 4 ] susq=[ 1 2 3 5 6 ]
+waiting ...
+controller ca 4.96875 119000056 23949696.805 4.96875 4.96875
+released.
+6 has been resumed.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 7 8 9 10 4 6 ] susq=[ 1 2 3 5 ]
+waiting ...
+finish 82.0931010246 120.925304174
+released.
+5 has been resumed.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 9 10 4 6 5 ] susq=[ 1 2 3 ]
+waiting ...
+controller ca 5.96875 118000056 19769642.8901 5.96875 4.96875
+cvms=6 rvwnd=4.0 rest=2 len(mq)=6
+8 has been suspended.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 10 4 6 5 ] susq=[ 1 2 3 8 ]
+9 has been suspended.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 10 4 6 5 ] susq=[ 1 2 3 8 9 ]
+waiting ...
+controller ca 4.4765625 118000194 26359554.6806 4.4765625 4.4765625
+released.
+9 has been resumed.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 10 4 6 5 9 ] susq=[ 1 2 3 8 ]
+waiting ...
+Could not remove vminfo from mq.
+finish 96.4646921158 135.399038076
+released.
+8 has been resumed.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 10 4 6 5 9 8 ] susq=[ 1 2 3 ]
+waiting ...
+finish 93.1176640987 142.411898136
+released.
+3 has been resumed.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 10 4 6 5 8 3 ] susq=[ 1 2 ]
+waiting ...
+controller ca 5.4765625 118000056 21546372.5649 5.4765625 4.4765625
+cvms=5 rvwnd=4.0 rest=1 len(mq)=6
+10 has been suspended.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 6 5 8 3 ] susq=[ 1 2 10 ]
+waiting ...
+controller ca 4.107421875 118000056 28728496.7532 4.107421875 4.107421875
+released.
+10 has been resumed.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 6 5 8 3 10 ] susq=[ 1 2 ]
+waiting ...
+finish 98.900965929 158.858870983
+released.
+2 has been resumed.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 6 5 8 3 2 ] susq=[ 1 ]
+waiting ...
+controller ca 5.107421875 117779056 23060373.4883 5.107421875 4.107421875
+cvms=5 rvwnd=4.0 rest=1 len(mq)=6
+4 has been suspended.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 6 5 8 3 2 ] susq=[ 1 4 ]
+waiting ...
+finish 141.673631191 169.643462181
+released.
+4 has been resumed.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 6 5 8 2 4 ] susq=[ 1 ]
+waiting ...
+controller ca 3.83056640625 116367084 30378558.0665 3.83056640625 3.83056640625
+cvms=4 rvwnd=3.0 rest=1 len(mq)=5
+6 has been suspended.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 8 2 4 ] susq=[ 1 6 ]
+waiting ...
+finish 149.923834801 177.995131969
+released.
+6 has been resumed.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 8 2 6 ] susq=[ 1 ]
+waiting ...
+finish 143.928731918 182.660259008
+released.
+1 has been resumed.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 5 8 2 1 ] susq=[ ]
+waiting ...
+finish 146.484621048 185.114842176
+released.
+ssh gra2 "virsh migrate --live gra2-6 qemu+ssh://grb2/system"
+ 11 has started.
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 2 1 11 ] susq=[ ]
+waiting ...
+controller ca 2.87292480469 116819084 40662075.0426 2.87292480469 2.87292480469
+released.
+ssh gra4 "virsh migrate --live gra4-1 qemu+ssh://grb4/system"12 has started.
+
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 2 1 11 12 ] susq=[ ]
+waiting ...
+finish 180.959617138 198.266440153
+released.
+ssh gra4 "virsh migrate --live gra4-4 qemu+ssh://grb4/system"13 has started.
+list=[ 14 15 16 17 18 19 
+20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 1 11 12 13 ] susq=[ ]
+waiting ...
+controller ca 3.87292480469 121000278 31242609.6818 3.87292480469 2.87292480469
+released.
+ssh gra4 "virsh migrate --live gra4-2 qemu+ssh://grb4/system"14 has started.
+
+list=[ 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 1 11 12 13 14 ] susq=[ ]
+finish 192.530217886 198.67859602
+released.
+ssh gra4 "virsh migrate --live gra4-3 qemu+ssh://grb4/system"
+ 15 has started.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 11 12 13 14 15 ] susq=[ ]
+waiting ...
+controller ca 4.87292480469 115000187 23599827.9492 4.87292480469 2.87292480469
+cvms=5 rvwnd=4.0 rest=1 len(mq)=6
+8 has been suspended.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 11 12 13 14 15 ] susq=[ 8 ]
+waiting ...
+finish 28.2963988781 216.219630957
+released.
+8 has been resumed.
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 11 13 14 15 8 ] susq=[ ]
+waiting ...
+finish 31.8219561577 216.937265158
+released.
+ssh gra5 "virsh migrate --live gra5-2 qemu+ssh://grb5/system"
+ 16 has started.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 13 14 15 8 16 ] susq=[ ]
+waiting ...
+controller ca 3.65469360352 107498140 29413721.5488 3.65469360352 3.65469360352
+cvms=4 rvwnd=3.0 rest=1 len(mq)=5
+13 has been suspended.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 14 15 8 16 ] susq=[ 13 ]
+waiting ...
+controller ca 2.74102020264 119000140 43414543.2002 2.74102020264 2.74102020264
+released.
+13 has been resumed.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 14 15 8 16 13 ] susq=[ ]
+waiting ...
+controller ca 3.74102020264 118000140 31542235.4354 3.74102020264 2.74102020264
+cvms=4 rvwnd=3.0 rest=1 len(mq)=5
+14 has been suspended.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 15 8 16 13 ] susq=[ 14 ]
+waiting ...
+finish 33.0959639549 250.033658028
+released.
+14 has been resumed.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 15 8 13 14 ] susq=[ ]
+waiting ...
+controller ca 2.80576515198 97000168 34571734.5344 2.80576515198 2.80576515198
+cvms=3 rvwnd=2.0 rest=1 len(mq)=4
+15 has been suspended.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 13 14 ] susq=[ 15 ]
+waiting ...
+Could not remove vminfo from mq.
+finish 56.2357017994 254.922513962
+released.
+15 has been resumed.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 13 14 15 ] susq=[ ]
+waiting ...
+finish 59.2877430916 257.554870129
+released.
+ssh gra1 "virsh migrate --live gra1-1 qemu+ssh://grb1/system"
+ 17 has started.
+list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 14 15 17 ] susq=[ ]
+waiting ...
+finish 60.8532688618 259.438935995
+released.
+ssh gra1 "virsh migrate --live gra1-2 qemu+ssh://grb1/system"
+ 18 has started.
+list=[ 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 15 17 18 ] susq=[ ]
+waiting ...
+controller ca 2.10432386398 40000472 19008705.2115 2.10432386398 2.10432386398
+waiting ...
+controller ca 1.57824289799 84000140 53223835.2583 1.57824289799 1.57824289799
+released.
+ssh gra2 "virsh migrate --live gra2-3 qemu+ssh://grb2/system"19 has started.
+
+list=[ 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 15 17 18 19 ] susq=[ ]
+waiting ...
+finish 15.7704639435 273.325801134
+released.
+ssh gra2 "virsh migrate --live gra2-2 qemu+ssh://grb2/system"
+20 has started.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 15 18 19 20 ] susq=[ ]
+waiting ...
+finish 14.2395358086 273.678977966
+released.
+ssh gra2 "virsh migrate --live gra2-4 qemu+ssh://grb2/system"
+ 21 has started.
+list=[ 22 23 24 25 26 27 28 29 30 ] mq=[ 8 15 19 20 21 ] susq=[ ]
+waiting ...
+controller ca 2.57824289799 35000379 13575283.7823 2.57824289799 1.57824289799
+cvms=3 rvwnd=2.0 rest=1 len(mq)=5
+8 has been suspended.
+list=[ 22 23 24 25 26 27 28 29 30 ] mq=[ 15 19 20 21 ] susq=[ 8 ]
+waiting ...
+controller ca 1.93368217349 60000168 31028970.9563 1.93368217349 1.93368217349
+released.
+8 has been resumed.
+list=[ 22 23 24 25 26 27 28 29 30 ] mq=[ 15 19 20 21 8 ] susq=[ ]
+waiting ...
+finish 31.6703739166 304.997055054
+released.
+ssh gra2 "virsh migrate --liveerror: operation failed: migration job: unexpectedly failed
+error: End of file while reading data: : Input/output error
+ gra2-1 qemu+ssh://grb2/system"22 has started.
+list=[
+ 23 24 25 26 27 28 29 30 ] mq=[ 15 19 21 8 22 ] susq=[ ]
+waiting ...
+controller ca 2.93368217349 59000168 20111301.9444 2.93368217349 1.93368217349
+cvms=3 rvwnd=2.0 rest=1 len(mq)=5
+15 has been suspended.
+list=[ 23 24 25 26 27 28 29 30 ] mq=[ 19 21 8 22 ] susq=[ 15 ]
+waiting ...
+finish 32.4348640442 305.642161131
+released.
+15 has been resumed.
+list=[ 23 24 25 26 27 28 29 30 ] mq=[ 21 8 22 15 ] susq=[ ]
+waiting ...
+finish 33.9521558285 307.631675959
+released.
+ssh gra3 "virsh migrate --live gra3-4 qemu+ssh://grb3/system"
+ 23 has started.
+list=[ 24 25 26 27 28 29 30 ] mq=[ 8 22 15 23 ] susq=[ ]
+waiting ...
+controller ca 2.20026163012 60000168 27269560.6644 2.20026163012 2.20026163012
+released.
+ssh gra3 "virsh migrate --live gra3-7 qemu+ssh://grb3/system"24 has started.
+list=[ 25 
+26 27 28 29 30 ] mq=[ 8 22 15 23 24 ] susq=[ ]
+waiting ...
+finish 12.436262846 320.068361998
+released.
+ssh gra3 "virsh migrate --live gra3-2 qemu+ssh://grb3/system"
+ 25 has started.
+list=[ 26 27 28 29 30 ] mq=[ 8 22 15 24 25 ] susq=[ ]
+waiting ...
+finish 17.6367540359 322.634417057
+released.
+ssh gra3 "virsh migrate --live gra3-5 qemu+ssh://grb3/system"
+ 26 has started.
+list=[ 27 28 29 30 ] mq=[ 8 15 24 25 26 ] susq=[ ]
+waiting ...
+controller ca 3.20026163012 108000582 33747422.7056 3.20026163012 2.20026163012
+released.
+ssh gra3 "virsh migrate --live gra3-3 qemu+ssh://grb3/system"27 has started.
+
+list=[ 28 29 30 ] mq=[ 8 15 24 25 26 27 ] susq=[ ]
+waiting ...
+finish 16.9164130688 332.768670082
+released.
+ssh gra3 "virsh migrate --live gra3-6 qemu+ssh://grb3/system"
+ 28 has started.
+list=[ 29 30 ] mq=[ 8 15 25 26 27 28 ] susq=[ ]
+waiting ...
+controller ca 4.20026163012 100000112 23808067.403 4.20026163012 2.20026163012
+cvms=4 rvwnd=3.0 rest=1 len(mq)=6
+8 has been suspended.
+list=[ 29 30 ] mq=[ 15 25 26 27 28 ] susq=[ 8 ]
+waiting ...
+finish 17.12490201 337.193893194
+released.
+8 has been resumed.
+list=[ 29 30 ] mq=[ 15 26 27 28 8 ] susq=[ ]
+waiting ...
+controller ca 3.15019622259 31000196 9840719.05671 3.15019622259 3.15019622259
+cvms=3 rvwnd=2.0 rest=1 len(mq)=5
+15 has been suspended.
+list=[ 29 30 ] mq=[ 26 27 28 8 ] susq=[ 15 ]
+waiting ...
+finish 27.311412096 349.946303129
+released.
+15 has been resumed.
+list=[ 29 30 ] mq=[ 27 28 8 15 ] susq=[ ]
+waiting ...
+finish 31.6698980331 358.184556007
+released.
+ssh gra3 "virsh migrate --live gra3-1 qemu+ssh://grb3/system"
+29 has started.
+list=[ 30 ] mq=[ 28 8 15 29 ] susq=[ ]
+finish 25.5027649403 358.272005081
+released.
+ssh gra3 "virsh migrate --live gra3-8 qemu+ssh://grb3/system"
+ 30 has started.
+list=[ ] mq=[ 8 15 29 30 ] susq=[ ]
+waiting ...
+controller ca 2.36264716694 72000196 30474375.1024 2.36264716694 2.36264716694
+released.
+migrator done.
+controller ca 3.36264716694 43000112 12787577.7223 3.36264716694 2.36264716694
+finish 62.9055578709 421.090600014
+finish 63.3953180313 421.680840015
+real 421.74
+user 4.87
+sys 2.84
+
+Fri Sep 27 10:18:49 2013
+----------------

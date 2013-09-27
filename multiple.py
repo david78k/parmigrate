@@ -19,6 +19,8 @@ vwnd = 1
 alpha = 0.75
 threshold = 8
 sampletime = 10
+epsilon=0.1 # 10% change
+
 maxbandwidth = 120 # MB
 
 src_prefix = "gra"
@@ -274,13 +276,15 @@ def resume(vminfo):
 
 def control():
 	global vwnd, threshold, done
-	vwnd = 1
+	vwnd = 8
+	#vwnd = 1
 	# total bandwidth of the previous iteration
 	totalprev = 0
 	# average bandwidth of the previous iteration
 	avgprev = 0
 	congested = False
-	phase = "ss" # slow start 
+	#phase = "ss" # slow start 
+	phase = "ca" # congestion avoidance
 
 	print "phase vwnd total avg totalvms threshold"
 	while not done:
@@ -292,10 +296,18 @@ def control():
 	        print "controller", phase, vwnd, total, avg, totalvms, threshold
 
 		cond.acquire()
+		#delta = (totalprev - total)/totalprev
+		if (totalprev == 0):
+			delta = 1
+		else:
+			delta = (total - totalprev)/totalprev
+
 		if (phase == "ss"):
-			# if congestion occurs
+			# if congestion (major change in throughput) occurs
 			#if ( avg < avgprev):
-                	if ( total < totalprev ):
+                	#if ( delta < (-1)*epsilon ):
+                	#if ( total < totalprev ):
+                	if ( total < (0.95)*totalprev ):
 				vwnd = vwnd * alpha
 				threshold = vwnd
 				phase = "ca"	
@@ -308,11 +320,14 @@ def control():
                 			vwnd *= 2
        		else:
                 	#if ( avg < avgprev ):
-                	if ( total < totalprev ):
+                	#if ( delta < (-1)*epsilon):
+                	#if ( total < totalprev ):
+                	if ( total < (0.95)*totalprev ):
 				vwnd = vwnd * alpha
 				threshold = vwnd
 				#suspend(vm)
-                	else:
+                	#else:
+                	elif ( total > (1.05)*totalprev ):
                         	vwnd += 1
 
         	if ( vwnd < 1 ):
