@@ -3,7 +3,8 @@
 data = "test.mat"
 %A = load (data) 
 
-prefix = "lf-0-r8"
+%prefix = "lf-0-r8"
+prefix = "lf-0-r14"
 data = strcat(prefix, ".controller");
 output = strcat(prefix, ".vwnd");
 
