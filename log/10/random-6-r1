@@ -1,0 +1,77 @@
+Log of time -p /nfs/parmigrate/multiple.py -s random -v 6 
+Sat Sep 28 14:03:01 2013
+
+scheduling is random
+vm window is 6
+('1', 2, 'gra2', 'gra2-4', 548864)
+('2', 2, 'gra2', 'gra2-6', 1073152)
+('3', 2, 'gra2', 'gra2-5', 1073152)
+('4', 2, 'gra2', 'gra2-3', 548864)
+('5', 2, 'gra2', 'gra2-2', 548864)
+('6', 2, 'gra2', 'gra2-1', 548864)
+('7', 3, 'gra3', 'gra3-4', 548864)
+('8', 3, 'gra3', 'gra3-1', 548864)
+('9', 3, 'gra3', 'gra3-7', 548864)
+('10', 3, 'gra3', 'gra3-6', 548864)
+ssh gra2 "virsh migrate --live gra2-4 qemu+ssh://grb2/system"
+1 has started.
+list=[ 2 3 4 5 6 7 8 9 10 ] mq=[ 1 ] susq=[ ]
+released.
+ssh gra2 "virsh migrate --live gra2-6 qemu+ssh://grb2/system"
+2 has started.
+list=[ 3 4 5 6 7 8 9 10 ] mq=[ 1 2 ] susq=[ ]
+released.
+ssh gra2 "virsh migrate --live gra2-5 qemu+ssh://grb2/system"
+ 3 has started.
+list=[ 4 5 6 7 8 9 10 ] mq=[ 1 2 3 ] susq=[ ]
+released.
+ssh gra2 "virsh migrate --live gra2-3 qemu+ssh://grb2/system"
+ 4 has started.
+list=[ 5 6 7 8 9 10 ] mq=[ 1 2 3 4 ] susq=[ ]
+released.
+ssh gra2 "virsh migrate --live gra2-2 qemu+ssh://grb2/system"
+ 5 has started.
+list=[ 6 7 8 9 10 ] mq=[ 1 2 3 4 5 ] susq=[ ]
+released.
+ssh gra2 "virsh migrate --live gra2-1 qemu+ssh://grb2/system"
+ 6 has started.
+list=[ 7 8 9 10 ] mq=[ 1 2 3 4 5 6 ] susq=[ ]
+waiting ...
+finish 51.0634150505 54.6148221493
+released.
+ssh gra3 "virsh migrate --live gra3-4 qemu+ssh://grb3/system"
+ 7 has started.
+list=[ 8 9 10 ] mq=[ 1 2 3 4 5 7 ] susq=[ ]
+waiting ...
+finish 51.3770179749 54.7259540558
+released.
+ssh gra3 "virsh migrate --live gra3-1 qemu+ssh://grb3/system"
+ 8 has started.
+list=[ 9 10 ] mq=[ 1 2 3 5 7 8 ] susq=[ ]
+waiting ...
+finish 51.7808291912 54.8271892071
+released.
+9 has started.
+list=[ 10 ] mq=[ 2 3 5 7 8ssh gra3 "virsh migrate --live gra3-7 qemu+ssh://grb3/system"
+ 9 ] susq=[ ]
+waiting ...
+finish 51.6915261745 55.1416862011
+released.
+ssh gra3 "virsh migrate --live gra3-6 qemu+ssh://grb3/system"
+10 has started.
+list=[ ] mq=[ 2 3 7 8 9 10 ] susq=[ ]
+waiting ...
+finish 32.3006181717 87.1282901764
+released.
+migrator done.
+finish 39.7111370564 94.8533921242
+finish 42.322232008 96.937661171
+finish 117.627119064 120.774870157
+finish 117.877353907 121.12570405
+finish 80.4470272064 135.173456192
+real 135.20
+user 0.26
+sys 0.12
+
+Sat Sep 28 14:05:16 2013
+----------------

@@ -1,0 +1,4 @@
+Log of time -p /nfs/parmigrate/multiple.py -s random -v 4 
+Sat Sep 28 13:57:09 2013
+
+error: operation failed: migration job: unexpectedly failed

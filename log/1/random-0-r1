@@ -1,0 +1,13 @@
+Log of time -p /nfs/parmigrate/multiple.py -s random -v 0 
+Sat Sep 28 02:23:46 2013
+
+scheduling is random
+vm window is 0
+phase vwnd total avg totalvms thresholdmigrator done.
+
+real 1.05
+user 0.08
+sys 0.04
+
+Sat Sep 28 02:23:47 2013
+----------------

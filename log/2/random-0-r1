@@ -1,0 +1,26 @@
+Log of time -p /nfs/parmigrate/multiple.py -s random -v 0 
+Sat Sep 28 03:25:33 2013
+
+scheduling is random
+vm window is 0
+('1', 7, 'gra7', 'gra7-1', 2185216)
+('2', 8, 'gra8', 'gra8-1', 4370432)
+phase vwnd total avg totalvms threshold
+ 1 has started.
+list=[ 2 ] mq=[ 1 ] susq=[ ]
+ssh gra7 "virsh migrate --live gra7-1 qemu+ssh://grb7/system"
+released.
+ssh gra8 "virsh migrate --live gra8-1 qemu+ssh://grb8/system"
+ 2 has started.
+list=[ ] mq=[ 1 2 ] susq=[ ]
+released.
+migrator done.
+controller ca 4 47000175 11750043 4 8
+finish 60.0242249966 61.2744600773
+finish 94.5268070698 95.8782670498
+real 95.90
+user 0.24
+sys 0.14
+
+Sat Sep 28 03:27:09 2013
+----------------

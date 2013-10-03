@@ -14,7 +14,7 @@ from collections import deque
 # total number of physical machines (pms)
 npms = 8
 # vm window
-vwnd = 1
+vwnd = 4
 # decrement factor
 alpha = 0.75
 threshold = 8
@@ -276,8 +276,8 @@ def resume(vminfo):
 
 def control():
 	global vwnd, threshold, done
-	vwnd = 8
-	#vwnd = 1
+	#global threshold, done
+	vwnd = 4
 	# total bandwidth of the previous iteration
 	totalprev = 0
 	# average bandwidth of the previous iteration

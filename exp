@@ -1,17 +1,19 @@
 #!/bin/bash
-scheds=( lf )
+scheds=( rand )
 #scheds=( rand lf sf )
 #vwnds=( 30 20 10 5 2 1 )
-#vwnds=( 20 2 )
-#vwnds=( 4 6 8 12 14 16 18 )
-vwnds=( 0 )
+#vwnds=( 1 2 4 6 8 10 30 )
+vwnds=( 1 )
+#vwnds=( 0 )
 #rounds=( 3 4 )
 #delays=( 20 80 180 )
-delays=( 20-80-180 )
+delays=( 300 )
+#delays=( 10 300 20 80 180 )
+#delays=( 20-80-180 )
 sleeptime=300
 #sleeptime=1
-network=dynamic
-#network=static
+#network=dynamic
+network=static
 mode=total
 #mode=gridftp
 
@@ -33,6 +35,7 @@ function exp(){
 #	exe=$basedir/multiple-without-controller.py
 	logdir=$basedir/log/$delay
 	logfile=$logdir/$sched-$vwnd-r$run
+	dstat=$logdir/$sched-$vwnd-r$run.dstat
 
 	mkdir -p $logdir
 
@@ -52,8 +55,12 @@ function exp(){
 		echo "empty"
 	fi
 	
+	ssh $wanem dstat -N --noheaders > $dstat &
+
 	echo $cmd
 	$cmd
+
+	pgrep -fl dstat | awk '{print $1}' | xargs kill -9
 
 	#wait
 }
@@ -70,18 +77,19 @@ do
 				echo "$basedir/congestor &"
 				$basedir/congestor &
 			else
+				echo "ssh $wanem service tc delay $d"
 				ssh $wanem service tc delay $d
 			fi
 
 			cmd="exp $sched $vwnd $delay"
 
-#			echo $cmd 1
-#			$cmd 1
-#			sleep $sleeptime
+			#echo $cmd 1
+			#$cmd 1
+	#		sleep $sleeptime
 
 			echo $cmd 2 gr121
 			$cmd 2 gr121
-#			sleep $sleeptime
+	#		sleep $sleeptime
 
 #			$cmd 3 
 #			sleep $sleeptime
