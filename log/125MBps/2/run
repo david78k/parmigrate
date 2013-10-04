@@ -21,7 +21,7 @@ eps=${name}.eps
 xlabel="VM WINDOW"
 ylabel="MIGARTION TIME (SEC)"
 
-colors=6
+colors=2
 
 function genplot() {
 	cmd="emf($emf)"
