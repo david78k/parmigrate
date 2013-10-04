@@ -1,5 +1,5 @@
 #!/bin/bash
-scheds=( random )
+scheds=( rand )
 #scheds=( lf sf rand )
 #vwnds=( 0 )
 #vwnds=( 2 20 )

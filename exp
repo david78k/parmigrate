@@ -1,14 +1,16 @@
 #!/bin/bash
-scheds=( rand )
+scheds=( random )
+#scheds=( rand )
 #scheds=( rand lf sf )
-#vwnds=( 30 20 10 5 2 1 )
+vwnds=( 4 )
 #vwnds=( 1 2 4 6 8 10 30 )
-vwnds=( 6 8 10 30 2 1 )
+#vwnds=( 6 8 10 30 2 1 )
 #vwnds=( 0 )
 #rounds=( 3 4 )
-bw=75MBps
+bw=125MBps
+#bw=75MBps
 #delays=( 20 80 180 )
-delays=( 0 )
+delays=( 2 )
 #delays=( 10 300 20 80 180 )
 #delays=( 20-80-180 )
 sleeptime=300
@@ -58,13 +60,13 @@ function exp(){
 	fi
 	
 	ssh $wanem "dstat -n --noheaders" > $dstat &
-	ssh $wanem $ipfw $4
+	#ssh $wanem $ipfw $4
 
 	echo $cmd
 	$cmd
 
 	pgrep -fl dstat | awk '{print $1}' | xargs kill -9
-	ssh $wanem "ipfw -q -f flush; ipfw pipe 1 delete; ipfw pipe 2 delete"
+	#ssh $wanem "ipfw -q -f flush; ipfw pipe 1 delete; ipfw pipe 2 delete"
 
 	#wait
 }
