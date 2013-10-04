@@ -1,0 +1,8 @@
+#prefix=lf-0-r10
+prefix=random-0-r10
+grep controller $prefix | tail -n +2 | awk '{print $3,$4,$5,$6,$7}'> ${prefix}.controller
+octave genplot.m
+
+git add .
+git commit -a -m genplot
+git push
