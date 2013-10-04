@@ -3,11 +3,12 @@ scheds=( rand )
 #scheds=( rand lf sf )
 #vwnds=( 30 20 10 5 2 1 )
 #vwnds=( 1 2 4 6 8 10 30 )
-vwnds=( 1 )
+vwnds=( 6 8 10 30 2 1 )
 #vwnds=( 0 )
 #rounds=( 3 4 )
+bw=75MBps
 #delays=( 20 80 180 )
-delays=( 300 )
+delays=( 0 )
 #delays=( 10 300 20 80 180 )
 #delays=( 20-80-180 )
 sleeptime=300
@@ -24,6 +25,7 @@ exe=$basedir/multiple.py
 #exe=$basedir/multiple-without-controller.py
 
 wanem=gr122
+ipfw="/home/uf/ipfw3-2012/scripts/ipfwaddpipe"
 
 function exp(){
 	host=gr121
@@ -33,7 +35,7 @@ function exp(){
 	local delay=$3
 	local run=$4
 #	exe=$basedir/multiple-without-controller.py
-	logdir=$basedir/log/$delay
+	logdir=$basedir/log/$bw/$delay
 	logfile=$logdir/$sched-$vwnd-r$run
 	dstat=$logdir/$sched-$vwnd-r$run.dstat
 
@@ -55,12 +57,14 @@ function exp(){
 		echo "empty"
 	fi
 	
-	ssh $wanem dstat -N --noheaders > $dstat &
+	ssh $wanem "dstat -n --noheaders" > $dstat &
+	ssh $wanem $ipfw $4
 
 	echo $cmd
 	$cmd
 
 	pgrep -fl dstat | awk '{print $1}' | xargs kill -9
+	ssh $wanem "ipfw -q -f flush; ipfw pipe 1 delete; ipfw pipe 2 delete"
 
 	#wait
 }
@@ -83,13 +87,13 @@ do
 
 			cmd="exp $sched $vwnd $delay"
 
-			#echo $cmd 1
-			#$cmd 1
-	#		sleep $sleeptime
+			echo $cmd 1
+			$cmd 1
+			sleep $sleeptime
 
 			echo $cmd 2 gr121
 			$cmd 2 gr121
-	#		sleep $sleeptime
+			sleep $sleeptime
 
 #			$cmd 3 
 #			sleep $sleeptime
