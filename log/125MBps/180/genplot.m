@@ -8,7 +8,8 @@ prefix = "rand-6-r2"
 data = strcat(prefix, ".dstat");
 %output = strcat(prefix, ".vwnd");
 
-A = load (data);
+A = dlmread(data, ' ', 2, 0);
+%A = load (data);
 %A = load ('lf-0-r1.vwnd', 'ascii')
 
 %vwnds = A(:,1)
