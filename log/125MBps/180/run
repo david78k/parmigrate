@@ -1,7 +1,11 @@
-prefix=rand-0-r10
+prefix=rand-6-r2
+dstat=${prefix}.dstat
+bw=${prefix}.bw
 
 # for controller
 #grep controller $prefix | tail -n +2 | awk '{print $3,$4,$5,$6,$7}'> ${prefix}.controller
+
+sed 's/B//g;s/M/000000/g;s/k/000/g' $dstat > $bw
 
 octave genplot.m
 

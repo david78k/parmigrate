@@ -5,7 +5,8 @@ data = "test.mat"
 
 prefix = "rand-6-r2"
 %data = strcat(prefix, ".controller");
-data = strcat(prefix, ".dstat");
+data = strcat(prefix, ".bw");
+%data = strcat(prefix, ".dstat");
 %output = strcat(prefix, ".vwnd");
 
 A = dlmread(data, ' ', 2, 0);
