@@ -1,0 +1,47 @@
+#!/bin/bash
+#ipfw add pipe 1 ip from gra1 to grb1
+
+if [ $# -lt 1 ]; then
+        echo "usage: $0 pipe"
+        exit
+fi
+
+pipe=$1
+#limit="820mbit/s" # 50MB/s
+#limit="1220mbit/s" # 75MB/s
+#limit="1420mbit/s" # 86MB/s
+#limit="1640mbit/s" # 100MB/s
+limit="1940mbit/s" # 125MB/s
+#loss=0 # packet loss rate in %
+#loss=0.00001 # 118MB/s with loss 0.001%
+loss=0.00005 # 100MB/s with loss 0.005%
+#loss=0.0001 # 60-94MB/s with loss 0.01%
+#loss=0.0005 # 22-42MB/s with loss 0.05%
+
+ipfw -q -f flush
+ipfw pipe 1 delete
+ipfw pipe 2 delete
+
+src="192.168.20.0/28"
+dest="192.168.21.0/28"
+
+echo $src to $dest $limit $loss
+
+#if [ $pipe == "1" ]; then
+        #ipfw add pipe 1 ip from 192.168.20.0/28 to 192.168.21.0/28
+#       ipfw pipe 1 config bw ${limit}
+        #ipfw pipe 1 config bw ${limit}mbit/s
+        #ipfw pipe 1 config bw 1220mbit/s
+#elif [ $pipe == "2" ]; then
+
+if [ $pipe == "2" ]; then
+        src="192.168.21.0/28"
+        dest="192.168.20.0/28"
+        #ipfw add pipe 2 ip from 192.168.21.0/28 to 192.168.20.0/28
+        #ipfw pipe 2 config bw ${limit}
+        #ipfw pipe 2 config bw ${limit}mbit/s
+fi
+
+ipfw add pipe $pipe ip from $src to $dest
+ipfw pipe $pipe config bw ${limit}
+ipfw pipe $pipe config plr ${loss}

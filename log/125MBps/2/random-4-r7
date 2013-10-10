@@ -1,5 +1,5 @@
 Log of time -p /nfs/parmigrate/multiple.py -s random -v 4 
-Fri Oct  4 13:02:38 2013
+Fri Oct  4 12:08:41 2013
 
 scheduling is random
 vm window is 4
@@ -33,185 +33,186 @@ vm window is 4
 ('28', 7, 'gra7', 'gra7-2', 2185216)
 ('29', 7, 'gra7', 'gra7-1', 2185216)
 ('30', 8, 'gra8', 'gra8-1', 4370432)
-1 has started.ssh gra1 "virsh migrate --live gra1-1 qemu+ssh://grb1/system"
-
+ssh gra1 "virsh migrate --live gra1-1 qemu+ssh://grb1/system"
+1 has started.
 list=[ 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 ] susq=[ ]
 released.
-ssh gra1 "virsh migrate --live gra1-2 qemu+ssh://grb1/system"
 2 has started.
-list=[ 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 ] susq=[ ]
+list=[ ssh gra1 "virsh migrate --live gra1-2 qemu+ssh://grb1/system"
+3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 ] susq=[ ]
 released.
 ssh gra1 "virsh migrate --live gra1-3 qemu+ssh://grb1/system"
-3 has started.
+ 3 has started.
 list=[ 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 ] susq=[ ]
 released.
 ssh gra1 "virsh migrate --live gra1-4 qemu+ssh://grb1/system"
 4 has started.
 list=[ 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 2 3 4 ] susq=[ ]
 waiting ...
-finish 33.3102149963 39.6656420231
+finish 51.2628231049 57.3148589134
 released.
 ssh gra2 "virsh migrate --live gra2-4 qemu+ssh://grb2/system"
-5 has started.
+ 5 has started.
 list=[ 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 1 3 4 5 ] susq=[ ]
 waiting ...
-finish 43.6774859428 49.9319310188
+finish 60.1803538799 66.1311588287
 released.
 ssh gra2 "virsh migrate --live gra2-3 qemu+ssh://grb2/system"
  6 has started.
 list=[ 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 3 4 5 6 ] susq=[ ]
 waiting ...
-finish 47.8758659363 54.3325059414
+finish 63.9870989323 70.1397559643
 released.
 ssh gra2 "virsh migrate --live gra2-2 qemu+ssh://grb2/system"
- 7 has started.
+7 has started.
 list=[ 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 5 6 7 ] susq=[ ]
 waiting ...
-finish 22.8213829994 62.4875619411
+finish 18.7573008537 76.0727448463
 released.
 ssh gra2 "virsh migrate --live gra2-5 qemu+ssh://grb2/system"
-8 has started.
+ 8 has started.
 list=[ 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 6 7 8 ] susq=[ ]
 waiting ...
-finish 23.2030200958 73.1355659962
+finish 73.0127308369 79.2665338516
 released.
 ssh gra2 "virsh migrate --live gra2-6 qemu+ssh://grb2/system"
- 9 has started.
-list=[ 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 7 8 9 ] susq=[ ]
+9 has started.
+list=[ 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 6 7 8 9 ] susq=[ ]
 waiting ...
-finish 24.5388841629 78.8719360828
+finish 22.4816298485 88.6133508682
 released.
 ssh gra2 "virsh migrate --live gra2-1 qemu+ssh://grb2/system"
- 10 has started.
-list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 8 9 10 ] susq=[ ]
+10 has started.
+list=[ 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 7 8 9 10 ] susq=[ ]
 waiting ...
-finish 44.5521798134 107.040263891
+finish 22.7204720974 92.8606669903
 released.
 ssh gra3 "virsh migrate --live gra3-5 qemu+ssh://grb3/system"
 11 has started.
-list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 4 9 10 11 ] susq=[ ]
+list=[ 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 9 10 11 ] susq=[ ]
 waiting ...
-finish 107.561579943 114.119914055
+finish 18.5305941105 107.144433022
 released.
 ssh gra3 "virsh migrate --live gra3-7 qemu+ssh://grb3/system"
- 12 has started.
-list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 10 11 12 ] susq=[ ]
+12 has started.
+list=[ 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 9 11 12 ] susq=[ ]
 waiting ...
-finish 35.5144629478 114.386919975
+finish 25.6108510494 118.471997976
 released.
 ssh gra3 "virsh migrate --live gra3-3 qemu+ssh://grb3/system"
 13 has started.
-list=[ 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 9 11 12 13 ] susq=[ ]
+list=[ 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 9 12 13 ] susq=[ ]
 waiting ...
-finish 52.2394180298 125.375550032
+finish 17.9070060253 125.051950932
 released.
 ssh gra3 "virsh migrate --live gra3-2 qemu+ssh://grb3/system"
  14 has started.
-list=[ 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 11 12 13 14 ] susq=[ ]
+list=[ 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 9 13 14 ] susq=[ ]
 waiting ...
-finish 18.8638210297 125.904634953
+finish 21.9066610336 140.379191875
 released.
 ssh gra3 "virsh migrate --live gra3-4 qemu+ssh://grb3/system"
  15 has started.
-list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 13 14 15 ] susq=[ ]
+list=[ 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 9 14 15 ] susq=[ ]
 waiting ...
-finish 20.4536521435 134.840979099
+finish 61.5641930103 140.831214905
 released.
 ssh gra3 "virsh migrate --live gra3-1 qemu+ssh://grb3/system"
- 16 has started.
-list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 12 14 15 16 ] susq=[ ]
+16 has started.
+list=[ 17 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 8 14 15 16 ] susq=[ ]
 waiting ...
-finish 23.9733009338 138.093833923
+finish 65.3356750011 141.408891916
 released.
 ssh gra3 "virsh migrate --live gra3-6 qemu+ssh://grb3/system"
  17 has started.
 list=[ 18 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 14 15 16 17 ] susq=[ ]
 waiting ...
-finish 24.7034928799 150.079561949
+finish 28.3769390583 153.429411888
 released.
 ssh gra3 "virsh migrate --live gra3-8 qemu+ssh://grb3/system"
 18 has started.
 list=[ 19 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 15 16 17 18 ] susq=[ ]
 waiting ...
-finish 40.6131699085 178.707470894
+finish 13.6107828617 153.990506887
 released.
 ssh gra4 "virsh migrate --live gra4-1 qemu+ssh://grb4/system"
  19 has started.
-list=[ 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 15 16 18 19 ] susq=[ ]
-finish 52.8437440395 178.748827934
+list=[ 20 21 22 23 24 25 26 27 28 29 30 ] mq=[ 16 17 18 19 ] susq=[ ]
+finish 13.2442529202 154.075907946
 released.
 ssh gra4 "virsh migrate --live gra4-3 qemu+ssh://grb4/system"
-20 has started.
-list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 16 18 19 20 ] susq=[ ]
+ 20 has started.
+list=[ 21 22 23 24 25 26 27 28 29 30 ] mq=[ 17 18 19 20 ] susq=[ ]
 waiting ...
-finish 28.987760067 179.067841053
+finish 33.7066497803 175.115981817
 released.
 ssh gra4 "virsh migrate --live gra4-4 qemu+ssh://grb4/system"
-21 has started.
-list=[ 22 23 24 25 26 27 28 29 30 ] mq=[ 16 19 20 21 ] susq=[ ]
-finish 44.3264029026 179.167958975
+ 21 has started.
+list=[ 22 23 24 25 26 27 28 29 30 ] mq=[ 18 19 20 21 ] susq=[ ]
+waiting ...
+finish 28.0169820786 181.44687891
 released.
 ssh gra4 "virsh migrate --live gra4-2 qemu+ssh://grb4/system"
- 22 has started.
+22 has started.
 list=[ 23 24 25 26 27 28 29 30 ] mq=[ 19 20 21 22 ] susq=[ ]
 waiting ...
-finish 35.7409820557 214.449057102
+finish 31.9584078789 213.40572381
 released.
 ssh gra5 "virsh migrate --live gra5-1 qemu+ssh://grb5/system"
 23 has started.
-list=[ 24 25 26 27 28 29 30 ] mq=[ 20 21 22 23 ] susq=[ ]
+list=[ 24 25 26 27 28 29 30 ] mq=[ 19 20 21 23 ] susq=[ ]
 waiting ...
-finish 50.5333042145 229.34180212
+finish 64.4693498611 218.560768843
 released.
 ssh gra5 "virsh migrate --live gra5-2 qemu+ssh://grb5/system"
 24 has started.
-list=[ 25 26 27 28 29 30 ] mq=[ 21 22 23 24 ] susq=[ ]
+list=[ 25 26 27 28 29 30 ] mq=[ 19 21 23 24 ] susq=[ ]
 waiting ...
-finish 57.5525608063 236.620812893
+finish 67.3700709343 221.36103487
 released.
 ssh gra5 "virsh migrate --live gra5-3 qemu+ssh://grb5/system"
  25 has started.
-list=[ 26 27 28 29 30 ] mq=[ 22 23 24 25 ] susq=[ ]
+list=[ 26 27 28 29 30 ] mq=[ 21 23 24 25 ] susq=[ ]
 waiting ...
-finish 78.6486339569 257.817408085
+finish 46.7885608673 221.905100822
 released.
-26 has started.
-list=[ ssh gra6 "virsh migrate --live gra6-1 qemu+ssh://grb6/system"
-27 28 29 30 ] mq=[ 23 24 25 26 ] susq=[ ]
+ssh gra6 "virsh migrate --live gra6-1 qemu+ssh://grb6/system"
+ 26 has started.
+list=[ 27 28 29 30 ] mq=[ 23 24 25 26 ] susq=[ ]
 waiting ...
-finish 43.9823698997 258.431977987
+finish 49.1610090733 262.567260981
 released.
 ssh gra6 "virsh migrate --live gra6-2 qemu+ssh://grb6/system"
 27 has started.
 list=[ 28 29 30 ] mq=[ 24 25 26 27 ] susq=[ ]
 waiting ...
-finish 37.602244854 266.944536924
+finish 49.9067101479 268.467936993
 released.
 ssh gra7 "virsh migrate --live gra7-2 qemu+ssh://grb7/system"
  28 has started.
 list=[ 29 30 ] mq=[ 25 26 27 28 ] susq=[ ]
 waiting ...
-finish 39.2103168964 297.028297901
+finish 50.0904729366 271.996003866
 released.
 ssh gra7 "virsh migrate --live gra7-1 qemu+ssh://grb7/system"
-29 has started.
+ 29 has started.
 list=[ 30 ] mq=[ 25 27 28 29 ] susq=[ ]
 waiting ...
-finish 100.133167028 336.75453496
+finish 107.740087032 329.101589918
 released.
 ssh gra8 "virsh migrate --live gra8-1 qemu+ssh://grb8/system"
- 30 has started.
+30 has started.
 list=[ ] mq=[ 27 28 29 30 ] susq=[ ]
 waiting ...
-finish 92.079087019 359.024174929
+finish 85.9484601021 354.416980982
 released.
 migrator done.
-finish 86.1691830158 383.1980021
-finish 127.189989805 385.622433901
-finish 93.1177158356 429.872824907
-real 429.90
-user 0.61
+finish 97.9044189453 369.900971889
+finish 132.036089897 394.603892803
+finish 104.435708046 433.537801027
+real 433.56
+user 0.60
 sys 0.29
 
-Fri Oct  4 13:09:48 2013
+Fri Oct  4 12:15:55 2013
 ----------------
