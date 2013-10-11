@@ -1,4 +1,4 @@
-prefix=rand-6-r2
+prefix=rand-10-r1
 dstat=${prefix}.dstat
 bw=${prefix}.bw
 
@@ -7,7 +7,7 @@ bw=${prefix}.bw
 
 sed 's/B//g;s/M/000000/g;s/k/000/g' $dstat > $bw
 
-octave genplot.m
+octave genplot.m $prefix
 
 git add .
 git commit -a -m genplot

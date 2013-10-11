@@ -1,9 +1,14 @@
+#!/usr/bin/octave -qf
+
 %warning("off", "Octave:future-time-stamp");
 
-data = "test.mat"
+args = argv();
+prefix = args{1}
+
+%data = "test.mat"
 %A = load (data) 
 
-prefix = "rand-6-r2"
+%prefix = "rand-6-r2"
 %data = strcat(prefix, ".controller");
 data = strcat(prefix, ".bw");
 %data = strcat(prefix, ".dstat");
