@@ -1,5 +1,5 @@
-N=8
-prefix=random-8-r1
+N=4
+prefix=random-4-r1
 #prefix=rand-1-r1
 #prefix=rand-6-r2
 dstat=${prefix}.dstat
