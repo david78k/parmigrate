@@ -1,5 +1,5 @@
-prefix=rand-10-r1
-#prefix=rand-6-r2
+#prefix=rand-10-r1
+prefix=rand-6-r2
 dstat=${prefix}.dstat
 bw=${prefix}.bw
 
