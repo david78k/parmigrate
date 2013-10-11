@@ -1,3 +1,4 @@
+N=8
 prefix=random-8-r1
 #prefix=rand-1-r1
 #prefix=rand-6-r2
@@ -10,7 +11,7 @@ bw=${prefix}.bw
 # for static migrations
 sed 's/B//g;s/M/000000/g;s/k/000/g' $dstat | tail -n +3 > $bw
 
-octave genplot.m $prefix
+octave genplot.m $prefix $N
 
 git add .
 git commit -a -m genplot

@@ -2,6 +2,7 @@
 
 args = argv();
 prefix = args{1}
+N = args{2}
 
 %A = load (data) 
 
@@ -29,7 +30,8 @@ saveas (1, strcat(output, ".emf"));
 figure;
 output = strcat(prefix, ".bw.recv");
 x = 1:1:length(A);
-plot(x, A(:,1)/1000000);
+plot(x, A(:,1)/1000000, x, A(:,1)/1000000/N, '-.*');
+%plot(x, A(:,1)/1000000);
 xlabel('TIME (SEC)');
 ylabel('THROUGHPUT (MB/s)');
 
@@ -41,11 +43,12 @@ saveas (1, strcat(output, ".emf"));
 figure;
 output = strcat(prefix, ".bw.send");
 x = 1:1:length(A);
-plot(x, A(:,2)/1000000);
+plot(x, A(:,2)/1000000, x, A(:,2)/1000000/N, '-.*');
+%plot(x, A(:,2)/1000000);
 %plot(x, A(:,2)/1000000, '-.*');
 xlabel('TIME (SEC)');
 ylabel('THROUGHPUT (MB/s)');
-%legend('AGGREGATE', 'PER VM');
+legend('AGGREGATE', 'PER VM');
 
 saveas (1, strcat(output, ".png"));
 saveas (1, strcat(output, ".eps"));
