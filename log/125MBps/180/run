@@ -1,4 +1,4 @@
-prefix=random-6-r1
+prefix=random-8-r1
 #prefix=rand-1-r1
 #prefix=rand-6-r2
 dstat=${prefix}.dstat
