@@ -1,6 +1,8 @@
-N=6
+N=10
+run=1
+
 #prefix=random-${N}-r2
-prefix=rand-${N}-r2
+prefix=rand-${N}-r${run}
 #prefix=rand-1-r1
 dstat=${prefix}.dstat
 bw=${prefix}.bw
