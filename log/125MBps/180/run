@@ -1,7 +1,7 @@
-N=8
-prefix=random-${N}-r2
+N=6
+#prefix=random-${N}-r2
+prefix=rand-${N}-r2
 #prefix=rand-1-r1
-#prefix=rand-6-r2
 dstat=${prefix}.dstat
 bw=${prefix}.bw
 
