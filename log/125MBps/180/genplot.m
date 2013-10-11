@@ -2,7 +2,7 @@
 
 args = argv();
 prefix = args{1}
-N = args{2}
+N = str2num(args{2})
 
 %A = load (data) 
 
