@@ -1,29 +1,67 @@
 #!/usr/bin/octave -qf
 
-%warning("off", "Octave:future-time-stamp");
-
 args = argv();
 prefix = args{1}
 
-%data = "test.mat"
 %A = load (data) 
 
 %prefix = "rand-6-r2"
-%data = strcat(prefix, ".controller");
 data = strcat(prefix, ".bw");
 %data = strcat(prefix, ".dstat");
-%output = strcat(prefix, ".vwnd");
 
 %A = dlmread(data, ' ', 2, 0);
 A = load (data);
+
+% both receive and send
+figure;
+output = data
+x = 1:1:length(A);
+plot(x, A(:,1)/1000000, x, A(:,2)/1000000, '-.*');
+xlabel('TIME (SEC)');
+ylabel('THROUGHPUT (MB/s)');
+legend('RECEIVE', 'SEND');
+
+saveas (1, strcat(output, ".png"));
+saveas (1, strcat(output, ".eps"));
+saveas (1, strcat(output, ".emf"));
+
+% receive 
+figure;
+output = strcat(prefix, ".bw.recv");
+x = 1:1:length(A);
+plot(x, A(:,1)/1000000);
+xlabel('TIME (SEC)');
+ylabel('THROUGHPUT (MB/s)');
+
+saveas (1, strcat(output, ".png"));
+saveas (1, strcat(output, ".eps"));
+saveas (1, strcat(output, ".emf"));
+
+% send
+figure;
+output = strcat(prefix, ".bw.send");
+x = 1:1:length(A);
+plot(x, A(:,2)/1000000, '-.*');
+xlabel('TIME (SEC)');
+ylabel('THROUGHPUT (MB/s)');
+%legend('AGGREGATE', 'PER VM');
+
+saveas (1, strcat(output, ".png"));
+saveas (1, strcat(output, ".eps"));
+saveas (1, strcat(output, ".emf"));
+
+% for controller
+%data = strcat(prefix, ".controller");
+%output = strcat(prefix, ".vwnd");
 %A = load ('lf-0-r1.vwnd', 'ascii')
 
 %vwnds = A(:,1)
-
-figure;
+%figure;
 %gplot rand (100,1) with linespoints
 %x = -10:0.1:10;
 %plot (x, sin (x));
+%plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
+%plot(A(:,2:3)/1000000);
 %plot(A(:,:))
 %plot(A(:,[1]));
 %plot(A(:,[1, 5]));
@@ -38,20 +76,3 @@ figure;
 %saveas (1, strcat(output, ".png"));
 %saveas (1, strcat(output, ".eps"));
 %saveas (1, strcat(output, ".emf"));
-
-figure;
-output = data
-%output = strcat(prefix, ".bw");
-x = 1:1:length(A);
-plot(x, A(:,1)/1000000, x, A(:,2)/1000000, '-.*');
-%plot(x, A(:,2)/1000000, x, A(:,3)/1000000, '-.*');
-%plot(A(:,2:3)/1000000);
-%xlabel('ITERATION');
-xlabel('TIME (SEC)');
-ylabel('THROUGHPUT (MB/s)');
-legend('RECEIVE', 'SEND');
-%legend('AGGREGATE', 'PER VM');
-
-saveas (1, strcat(output, ".png"));
-saveas (1, strcat(output, ".eps"));
-saveas (1, strcat(output, ".emf"));

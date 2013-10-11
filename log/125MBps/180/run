@@ -7,7 +7,7 @@ bw=${prefix}.bw
 #grep controller $prefix | tail -n +2 | awk '{print $3,$4,$5,$6,$7}'> ${prefix}.controller
 
 # for static migrations
-#sed 's/B//g;s/M/000000/g;s/k/000/g' $dstat > $bw
+sed 's/B//g;s/M/000000/g;s/k/000/g' $dstat | tail -n +2 > $bw
 
 octave genplot.m $prefix
 
