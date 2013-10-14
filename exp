@@ -1,17 +1,18 @@
 #!/bin/bash
 #scheds=( random )
-scheds=( rand )
+#scheds=( rand )
 #scheds=( rand lf sf )
+scheds=( sf )
 vwnds=( 6 )
 #vwnds=( 1 2 4 6 8 10 30 )
 #vwnds=( 6 8 10 30 2 1 )
 #vwnds=( 0 )
 #rounds=( 3 4 )
 #bw=125MBps
-#bw=100MBps
-bw=75MBps
+bw=100MBps
+#bw=75MBps
 #delays=( 0 20 80 180 )
-delays=( 20 )
+delays=( 2 )
 #delays=( 10 300 20 80 180 )
 #delays=( 20-80-180 )
 sleeptime=60
@@ -92,11 +93,11 @@ do
 
 			echo $cmd 1
 			$cmd 1
-			sleep $sleeptime
+	#		sleep $sleeptime
 
-			echo $cmd 2 gr121
-			$cmd 2 gr121
-			sleep $sleeptime
+	#		echo $cmd 2 gr121
+	#		$cmd 2 gr121
+	#		sleep $sleeptime
 
 #			$cmd 3 
 #			sleep $sleeptime
