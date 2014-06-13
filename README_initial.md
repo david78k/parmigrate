@@ -12,7 +12,7 @@ experiments
 - exp
 
 Node memory distributon
-
+-----------------
 \# total of 30VMs
 * node1 (4/4GB): 512MB, 512MB, 1GB, and 2GB
 * node2 (6/4GB): 512MB, 512MB, 512MB, 512MB, 1GB, and 1GB
