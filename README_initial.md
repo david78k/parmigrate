@@ -11,7 +11,7 @@ controller
 experiments
 - exp
 
-\# node memory distributon
+Node memory distributon
 
 \# total of 30VMs
 * node1 (4/4GB): 512MB, 512MB, 1GB, and 2GB
